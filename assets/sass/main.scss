@@ -1,0 +1,168 @@
+/*公共样式*/
+/*解决头部有下拉框导致页面头部抖动的问题开始*/
+/*html,body{ overflow-y:scroll;  overflow-x: scroll}*/
+
+/*html,body{ overflow:scroll; min-height:101%;}*/
+/* 清除IE的叉号和眼睛 */
+::-ms-clear, ::-ms-reveal{display: none;}
+html{ overflow:-moz-scrollbars-vertical;scroll-behavior:smooth;}
+/*解决头部有下拉框导致页面头部抖动的问题结束*/
+ html,*:before, *:after{ box-sizing: border-box;}
+body{
+  font-size: 0.16rem;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,li{
+  margin:0;
+  padding:0;
+  list-style:none;
+  font-family:MicrosoftYaHei;
+  color: #004a8a;
+}
+button,a{
+    cursor: pointer;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: "microsoft yahei"; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+b, strong {
+    font-weight: bolder;
+}
+textarea {
+    overflow: auto;
+}
+a{
+  text-decoration:none;
+  color:#666;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration:underline;
+}
+img{
+  vertical-align:middle;
+}
+.hover_shadow:hover{
+  box-shadow: 0 0 0.2rem #ccc;
+  webkit-box-shadow: 0 0 0.2rem #ccc;
+}
+.icon{
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+.clear:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* 页面的淡入淡出 */
+.page-enter-active, .page-leave-active {
+  transition: opacity .4s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+.inline_box{
+  display: inline-block;
+}
+
+div.el-message{
+    top:31%;
+}
+
+/*公共class*/
+/*外层div容器，宽100%*/
+.main_container{
+  width:100%;
+}
+
+/*一行显示不下显示。。。*/
+.no_wrap{
+  overflow: hidden;/*超出部分隐藏*/
+  white-space: nowrap;/*不换行*/
+  text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+
+// 两行末尾省略
+.ellipsis-two-lines{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  white-space: pre-wrap;
+}
+
+/*内层定宽div容器*/
+.inner_container{
+  width:12rem;
+  margin:0 auto;
+}
+// 990页面
+.narrow_inner_container{
+  width:10rem;
+  margin:0 auto;
+}
+/*class为float_ul 里的li 左浮动*/
+.float_ul li, .float_ul{
+  float: left;
+}
+.text_bold{
+  font-weight: 600;
+}
+.color_main{
+  color:#ff7900;
+}
+.color_orange{
+    color:#f26419;
+}
+.text_center{
+  text-align: center;
+}
+.ilb{
+  display: inline-block;
+}
+.mainCss{
+  background-color: #004A8A;
+}
+/*图片动态效果*/
+.img_hover_big{
+  overflow: hidden;
+}
+
+.img_hover_big img{
+  width: 100%;
+  height: 100%;
+  transition-duration: 700ms;
+}
+.img_hover_big img:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}

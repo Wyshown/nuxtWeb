@@ -1,55 +1,74 @@
 <template>
+
   <div>
-    <nuxt/>
+    <!--此处为公众头部信息-->
+    <div style="width: 12.8rem;height: 0.80rem;margin:0px auto;background: #FFFFFF;display: flex;align-items: center;">
+      <img class="ilb float_ul" style="margin-left: 1.85rem;" src="~/static/img/logo.png">
+      <ul class="ilb float_ul" style="font-size: 0.17rem;margin-left: 1.55rem;height: 0.80rem;">
+        <li v-for="(headList,index) in headListData" :key="index" :class="{'active':headList.enName==navigationSelect}" style="height: 0.80rem;">
+          <a :href="headList.url" :class="{'activeFont':headList.enName==navigationSelect}" >{{ headList.name }}</a>
+        </li>
+      </ul>
+    </div>
+    <!--此处插入中间部分-->
+    <div style="width: 12.8rem;margin:0px auto;">
+      <nuxt/>
+    </div>
+    <!--此处插入底部部分-->
   </div>
 </template>
-
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import headJson from '~/static/json/head.json'
+export default {
+  data() {
+    return {
+      headListData: [],
+      navigationSelect: 'shouye'
+    }
+  },
+  mounted() {
+    this.headListData = headJson
+    console.log(this.headListData.length)
+    console.log(this.headListData)
+  }
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+</script>
+<style lang="scss" scoped>
+ul {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.button--green {
+li {
+  float: left;
   display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  height: 0.8rem;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 0.8rem;
+  padding: 0 0.3rem;
+}
+
+li a {
+  display: block;
+  color: #515862;
+  text-align: center;
   text-decoration: none;
-  padding: 10px 30px;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+li:hover:not(.active) {
+  background-color: #d1eaff;
+  a {
+    color: #004a8a;
+  }
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.active {
+  background-color: #004a8a;
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.activeFont {
+  color: white;
 }
 </style>
