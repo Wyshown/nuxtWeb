@@ -33,38 +33,26 @@
     <div style="background-color: #f4f4f4">
       <p class="fontSizeChengGongAnLiTitle" style="display: inline-block;">成功案例</p>
       <div class="chenggonganli clear" style="margin-top: 0.46rem; padding: 0 1.83rem;">
-        <div class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img class="float_ul" style="width: 1.36rem;height: 1.14rem;" src="https://www.gaoxun.com/savePath/changcheng\1shouye\1lunbotu\1.png">
+        <div v-for="(item,index) in chenggonganliData" :key="index" class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
+          <img :src="$store.state.env.imgRootUrl + item.model_img_url" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
           <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">培训</p>
-            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">25年间，先后组织各级政府部门、企业、机构完成2000多个咨询培训项目，培训学员60000余人，获得广泛认可。</p>
-          </div>
-        </div>
-        <div class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img class="float_ul" style="width: 1.36rem;height: 1.14rem;" src="https://www.gaoxun.com/savePath/changcheng\1shouye\1lunbotu\1.png">
-          <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">培训</p>
-            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">25年间，先后组织各级政府部门、企业、机构完成2000多个咨询培训项目，培训学员60000余人，获得广泛认可。</p>
-          </div>
-        </div>
-        <div class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img class="float_ul" style="width: 1.36rem;height: 1.14rem;" src="https://www.gaoxun.com/savePath/changcheng\1shouye\1lunbotu\1.png">
-          <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">培训</p>
-            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">25年间，先后组织各级政府部门、企业、机构完成2000多个咨询培训项目，培训学员60000余人，获得广泛认可。</p>
-          </div>
-        </div>
-        <div class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img class="float_ul" style="width: 1.36rem;height: 1.14rem;" src="https://www.gaoxun.com/savePath/changcheng\1shouye\1lunbotu\1.png">
-          <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">培训</p>
-            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">25年间，先后组织各级政府部门、企业、机构完成2000多个咨询培训项目，培训学员60000余人，获得广泛认可。</p>
+            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.model_name }}</p>
+            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.model_brief }}</p>
+            <p class="ilb fontSizeChengGongAnLiGengDuo">更多</p>
           </div>
         </div>
       </div>
     </div>
-    <div style="height: 4rem;">
-      aa
+    <!--美国概况-->
+    <div class="meiguoGaiKuang">
+      <p class="fontSizeMeiGuoGaiKuangTitle" style="display: inline-block;">美国概况</p>
+      <div style="margin-top: 0.46rem; padding: 0 1.83rem;border-bottom: 0.87rem solid #f4f4f4;">
+        <el-carousel interval="90000000" indicator-position="none" height="1.55rem;">
+          <el-carousel-item v-for="(item,index) in meiguogaikuangData" :key="index">
+            <img v-for="(subItem,subIndex) in item" :key="subIndex" :src="$store.state.env.imgRootUrl + item[subIndex].model_img_url" style="height: 1.55rem;width: 1.35rem;" >
+          </el-carousel-item>
+        </el-carousel>
+      </div>
     </div>
   </main>
 </template>
@@ -73,6 +61,7 @@ import lunboJson from '~/static/json/home/lunbo.json' // 首页轮播
 import yewufanweiJson from '~/static/json/home/yewufanwei.json' // 业务范围
 import gongsiyoushiJson from '~/static/json/home/gongsiyoushi.json' // 公司优势
 import chenggonganliJson from '~/static/json/home/chenggonganli.json' // 成功案例
+import meiguogaikuangJson from '~/static/json/home/meiguogaikuang.json' // 美国概况
 
 export default {
   data() {
@@ -84,7 +73,9 @@ export default {
       // 公司优势
       gongsiyoushiData: [],
       // 成功案例
-      chenggonganliData: []
+      chenggonganliData: [],
+      // 美国概况
+      meiguogaikuangData: []
     }
   },
   mounted() {
@@ -92,6 +83,7 @@ export default {
     this.yewufanweiData = yewufanweiJson
     this.gongsiyoushiData = gongsiyoushiJson
     this.chenggonganliData = chenggonganliJson
+    this.meiguogaikuangData = meiguogaikuangJson
   }
 }
 </script>
@@ -104,6 +96,17 @@ export default {
     border-radius: 50%;
   }
 }
+.meiguoGaiKuang {
+  background-color: #f4f4f4;
+  .el-carousel__item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+  }
+  .el-carousel__container {
+    height: 1.55rem;
+  }
+}
 </style>
 <style lang="scss" scoped>
 .el-carousel__item h3 {
@@ -112,14 +115,6 @@ export default {
   opacity: 0.75;
   line-height: 3rem;
   margin: 0;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
 }
 .fontSizeTitle {
   display: inline-block;
@@ -183,5 +178,40 @@ export default {
 }
 .chenggonganli div:nth-child(2n + 1) {
   margin-right: 0.2rem;
+}
+.fontSizeChengGongAnLiGengDuo {
+  height: 0.12rem;
+  font-size: 0.12rem;
+  font-weight: 400;
+  color: #a09196;
+  margin-top: 0.12rem;
+  text-align: right;
+  line-height: 0rem;
+  width: 100%;
+}
+.fontSizeMeiGuoGaiKuangTitle {
+  display: inline-block;
+  margin-top: 0.34rem;
+  text-align: center;
+  width: 100%;
+  color: #004a8a;
+  height: 0.21rem;
+  font-size: 0.22rem;
+  font-weight: 400;
+}
+.fontSizeMeiGuoGaiKuangTitleContent {
+  width: 0.32rem;
+  height: 0.17rem;
+  font-size: 0.16rem;
+  font-weight: 400;
+  color: #34141e;
+  line-height: 0.16rem;
+}
+.fontSizeMeiGuoGaiKuangTitlIentro {
+  height: 0.4rem;
+  font-size: 0.12rem;
+  font-weight: 400;
+  color: #a09196;
+  line-height: 0.14rem;
 }
 </style>

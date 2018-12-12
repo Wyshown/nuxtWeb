@@ -1,0 +1,90 @@
+[
+  [
+    {
+      "id": "1",
+      "model_name": "美国概况图1",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/1.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "1"
+    },
+    {
+      "id": "2",
+      "model_name": "美国概况图2",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/2.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "2"
+    },
+    {
+      "id": "3",
+      "model_name": "美国概况图3",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/3.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "3"
+    },
+    {
+      "id": "4",
+      "model_name": "美国概况图4",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/4.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "4"
+    },
+    {
+      "id": "5",
+      "model_name": "美国概况图5",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/5.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "5"
+    },
+    {
+      "id": "6",
+      "model_name": "美国概况图6",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/6.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "6"
+    }
+  ],
+  [
+    {
+      "id": "7",
+      "model_name": "美国概况图7",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/7.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "7"
+    },
+    {
+      "id": "8",
+      "model_name": "美国概况图8",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/8.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "8"
+    },
+    {
+      "id": "9",
+      "model_name": "美国概况图9",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/9.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "9"
+    },
+    {
+      "id": "10",
+      "model_name": "美国概况图10",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/10.png",
+      "skip_url": "美国概况二级页面",
+      "seq": "10"
+    },
+    {
+      "id": "11",
+      "model_name": "美国概况图11",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/1.png",
+      "skip_url": "美国概况二级页面1",
+      "seq": "11"
+    },
+    {
+      "id": "12",
+      "model_name": "美国概况图12",
+      "model_img_url": "changcheng/1shouye/5meiguogaikuang/4.png",
+      "skip_url": "美国概况二级页面4",
+      "seq": "12"
+    }
+  ]
+]

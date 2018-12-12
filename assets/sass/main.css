@@ -100,12 +100,6 @@ img {
 .page-enter, .page-leave-active {
   opacity: 0; }
 
-.inline_box {
-  display: inline-block; }
-
-div.el-message {
-  top: 31%; }
-
 /*公共class*/
 /*外层div容器，宽100%*/
 .main_container {
@@ -131,10 +125,6 @@ div.el-message {
 /*内层定宽div容器*/
 .inner_container {
   width: 12rem;
-  margin: 0 auto; }
-
-.narrow_inner_container {
-  width: 10rem;
   margin: 0 auto; }
 
 /*class为float_ul 里的li 左浮动*/
@@ -171,5 +161,14 @@ div.el-message {
 .img_hover_big img:hover {
   transform: scale(1.05);
   cursor: pointer; }
+
+.fixed-head {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=main.css.map */

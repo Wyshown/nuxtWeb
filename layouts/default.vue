@@ -1,8 +1,7 @@
 <template>
-
-  <div>
+  <div style="background-color: #e5e5e5">
     <!--此处为公众头部信息-->
-    <div style="width: 12.8rem;height: 0.80rem;margin:0px auto;background: #FFFFFF;display: flex;align-items: center;">
+    <div class="fixed-head shouye" style="width: 12.8rem;height: 0.80rem;margin:0px auto;background: #FFFFFF;display: flex;align-items: center;">
       <img class="ilb float_ul" style="margin-left: 1.85rem;" src="~/static/img/logo.png">
       <ul class="ilb float_ul" style="font-size: 0.17rem;margin-left: 1.55rem;height: 0.80rem;">
         <li v-for="(headList,index) in headListData" :key="index" :class="{'active':headList.enName==navigationSelect}" style="height: 0.80rem;">
@@ -15,60 +14,119 @@
       <nuxt/>
     </div>
     <!--此处插入底部部分-->
+    <div style="width: 12.8rem;margin:0px auto;height: 3.76rem;background-color: #072871">
+      <div style="height: 0.95rem;">
+        <p class="ilb wangzhandaohang">网站导航</p>
+      </div>
+      <div style="margin-left: 1.83rem;border-bottom: 1px solid #284689;border-top: 1px solid #284689;height: 1.88rem;margin-right: 1.6rem;display: flex;justify-content: space-between;">
+        <div v-for="(item,index) in footListData" :key="index">
+          <p class="ilb bottom_group">{{ item.bottom_name }}</p>
+          <ul style="margin-top: 0.23rem;">
+            <li v-for="(subItem,subIndex) in item.bottom_list" :key="subIndex" class="button_skip_p">
+              <a :target="subItem.skip_form" href="http://www.baidu.com">{{ subItem.model_name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p class="ilb banquanshuoming">美国长城国际 版权所有  GW International USA Inc. © Copyright 2018.        咨询电话：010-82515598        邮件：gwinternational@mail.com </p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import headJson from '~/static/json/head.json'
+import footJson from '~/static/json/foot.json'
 export default {
   data() {
     return {
       headListData: [],
+      footListData: [],
       navigationSelect: 'shouye'
     }
   },
   mounted() {
     this.headListData = headJson
-    console.log(this.headListData.length)
-    console.log(this.headListData)
+    this.footListData = footJson
   }
 }
 </script>
 <style lang="scss" scoped>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+.shouye {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
-li {
-  float: left;
-  display: inline-block;
-  height: 0.8rem;
-  vertical-align: middle;
-  text-align: center;
-  line-height: 0.8rem;
-  padding: 0 0.3rem;
-}
+  li {
+    float: left;
+    display: inline-block;
+    height: 0.8rem;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0.8rem;
+    padding: 0 0.3rem;
+  }
 
-li a {
-  display: block;
-  color: #515862;
-  text-align: center;
-  text-decoration: none;
-}
+  li a {
+    display: block;
+    color: #515862;
+    text-align: center;
+    text-decoration: none;
+  }
 
-li:hover:not(.active) {
-  background-color: #d1eaff;
-  a {
-    color: #004a8a;
+  li:hover:not(.active) {
+    background-color: #d1eaff;
+    a {
+      color: #004a8a;
+    }
+  }
+
+  .active {
+    background-color: #004a8a;
+  }
+  .activeFont {
+    color: white;
   }
 }
-
-.active {
-  background-color: #004a8a;
+.wangzhandaohang {
+  width: 0.89rem;
+  height: 0.22rem;
+  font-size: 0.22rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 0.22rem;
+  margin-left: 1.83rem;
+  margin-top: 0.56rem;
 }
-.activeFont {
-  color: white;
+.banquanshuoming {
+  width: 7.59rem;
+  margin-left: 1.83rem;
+  height: 0.15rem;
+  font-size: 0.12rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 0.22rem;
+  margin-top: 0.24rem;
+}
+.bottom_group {
+  width: 0.69rem;
+  height: 0.18rem;
+  margin-top: 0.29rem;
+  font-size: 0.17rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 0.22rem;
+}
+.button_skip_p {
+  font-size: 0.13rem;
+  font-weight: 400;
+  color: #8db0ff;
+  margin-bottom: 0.1rem;
+  a {
+    color: #8db0ff;
+  }
 }
 </style>
