@@ -19,7 +19,6 @@ p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,li{
   padding:0;
   list-style:none;
   font-family:MicrosoftYaHei;
-  color: #004a8a;
 }
 button,a{
     cursor: pointer;
@@ -162,4 +161,15 @@ img{
   margin:0 auto;
   left:0;
   right:0;
+}
+.el-pager li {
+  height: 0.42rem;
+  line-height: 0.42rem;
+  width: 0.42rem;
+  margin-right: 0.20rem;
+}
+.el-pagination .btn-next, .el-pagination .btn-prev {
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-right: 0.2rem;
 }

@@ -4,33 +4,33 @@
     "bottom_list": [
       {
         "id": "1",
-        "model_name": "境外培训",
-        "skip_url": "境外培训",
-        "skip_form": "_self"
+        "modelName": "境外培训",
+        "skipUrl": "境外培训",
+        "skipForm": "_self"
       },
       {
         "id": "2",
-        "model_name": "境外考察",
-        "skip_url": "境外考察",
-        "skip_form": "_self"
+        "modelName": "境外考察",
+        "skipUrl": "境外考察",
+        "skipForm": "_self"
       },
       {
         "id": "3",
-        "model_name": "人才引进",
-        "skip_url": "人才引进",
-        "skip_form": "_self"
+        "modelName": "人才引进",
+        "skipUrl": "人才引进",
+        "skipForm": "_self"
       },
       {
         "id": "4",
-        "model_name": "会议会展",
-        "skip_url": "会议会展",
-        "skip_form": "_self"
+        "modelName": "会议会展",
+        "skipUrl": "会议会展",
+        "skipForm": "_self"
       },
       {
         "id": "5",
-        "model_name": "项目实习",
-        "skip_url": "项目实习",
-        "skip_form": "_self"
+        "modelName": "项目实习",
+        "skipUrl": "项目实习",
+        "skipForm": "_self"
       }
     ]
   },
@@ -39,27 +39,27 @@
     "bottom_list": [
       {
         "id": "1",
-        "model_name": "资质",
-        "skip_url": "资质",
-        "skip_form": "_self"
+        "modelName": "资质",
+        "skipUrl": "资质",
+        "skipForm": "_self"
       },
       {
         "id": "2",
-        "model_name": "资源",
-        "skip_url": "资源",
-        "skip_form": "_self"
+        "modelName": "资源",
+        "skipUrl": "资源",
+        "skipForm": "_self"
       },
       {
         "id": "3",
-        "model_name": "经验",
-        "skip_url": "经验",
-        "skip_form": "_self"
+        "modelName": "经验",
+        "skipUrl": "经验",
+        "skipForm": "_self"
       },
       {
         "id": "4",
-        "model_name": "服务",
-        "skip_url": "服务",
-        "skip_form": "_self"
+        "modelName": "服务",
+        "skipUrl": "服务",
+        "skipForm": "_self"
       }
     ]
   },
@@ -68,33 +68,33 @@
     "bottom_list": [
       {
         "id": "1",
-        "model_name": "培训 ",
-        "skip_url": "培训 ",
-        "skip_form": "_self"
+        "modelName": "培训 ",
+        "skipUrl": "培训 ",
+        "skipForm": "_self"
       },
       {
         "id": "2",
-        "model_name": "考察",
-        "skip_url": "考察",
-        "skip_form": "_self"
+        "modelName": "考察",
+        "skipUrl": "考察",
+        "skipForm": "_self"
       },
       {
         "id": "3",
-        "model_name": "人才 ",
-        "skip_url": "人才 ",
-        "skip_form": "_self"
+        "modelName": "人才 ",
+        "skipUrl": "人才 ",
+        "skipForm": "_self"
       },
       {
         "id": "4",
-        "model_name": "会议",
-        "skip_url": "会议",
-        "skip_form": "_self"
+        "modelName": "会议",
+        "skipUrl": "会议",
+        "skipForm": "_self"
       },
       {
         "id": "5",
-        "model_name": "实习 ",
-        "skip_url": "实习 ",
-        "skip_form": "_self"
+        "modelName": "实习 ",
+        "skipUrl": "实习 ",
+        "skipForm": "_self"
       }
     ]
   },
@@ -103,21 +103,21 @@
     "bottom_list": [
       {
         "id": "1",
-        "model_name": "公司介绍",
-        "skip_url": "公司介绍",
-        "skip_form": "_self"
+        "modelName": "公司介绍",
+        "skipUrl": "公司介绍",
+        "skipForm": "_self"
       },
       {
         "id": "2",
-        "model_name": "境外合作单位",
-        "skip_url": "境外合作单位",
-        "skip_form": "_self"
+        "modelName": "境外合作单位",
+        "skipUrl": "境外合作单位",
+        "skipForm": "_self"
       },
       {
         "id": "3",
-        "model_name": "资质认证",
-        "skip_url": "资质认证",
-        "skip_form": "_self"
+        "modelName": "资质认证",
+        "skipUrl": "资质认证",
+        "skipForm": "_self"
       }
     ]
   },
@@ -126,21 +126,21 @@
     "bottom_list": [
       {
         "id": "1",
-        "model_name": "中国驻美国大使馆",
-        "skip_url": "http://www.china-embassy.org/",
-        "skip_form": "_blank"
+        "modelName": "中国驻美国大使馆",
+        "skipUrl": "http://www.china-embassy.org/",
+        "skipForm": "_blank"
       },
       {
         "id": "2",
-        "model_name": "美国驻中国大使馆",
-        "skip_url": "https://china.usembassy-china.org.cn/zh/",
-        "skip_form": "_blank"
+        "modelName": "美国驻中国大使馆",
+        "skipUrl": "https://china.usembassy-china.org.cn/zh/",
+        "skipForm": "_blank"
       },
       {
         "id": "3",
-        "model_name": "中国国家外专局",
-        "skip_url": "http://www.safea.gov.cn/",
-        "skip_form": "_blank"
+        "modelName": "中国国家外专局",
+        "skipUrl": "http://www.safea.gov.cn/",
+        "skipForm": "_blank"
       }
     ]
   }

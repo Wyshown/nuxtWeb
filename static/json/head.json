@@ -1,13 +1,13 @@
 [
   {
     "name":"首页",
-    "enName":"shouye",
-    "url":"http://www.baidu.com"
+    "enName":"index",
+    "url":"/"
   },
   {
     "name":"业务领域",
-    "enName":"yewulingyu",
-    "url":"http://www.google.com"
+    "enName":"yewulingyu-yewulingyu",
+    "url":"/yewulingyu/1"
   },
   {
     "name":"公司优势",

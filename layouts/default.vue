@@ -23,7 +23,7 @@
           <p class="ilb bottom_group">{{ item.bottom_name }}</p>
           <ul style="margin-top: 0.23rem;">
             <li v-for="(subItem,subIndex) in item.bottom_list" :key="subIndex" class="button_skip_p">
-              <a :target="subItem.skip_form" href="http://www.baidu.com">{{ subItem.model_name }}</a>
+              <a :target="subItem.skipForm" href="http://www.baidu.com">{{ subItem.modelName }}</a>
             </li>
           </ul>
         </div>
@@ -42,12 +42,13 @@ export default {
     return {
       headListData: [],
       footListData: [],
-      navigationSelect: 'shouye'
+      navigationSelect: ''
     }
   },
   mounted() {
     this.headListData = headJson
     this.footListData = footJson
+    this.navigationSelect = this.$route.name
   }
 }
 </script>

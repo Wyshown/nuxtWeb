@@ -3,7 +3,7 @@
     <!--轮播图-->
     <el-carousel height="4.95rem">
       <el-carousel-item v-for="(item,index) in lunboData" :key="index">
-        <img :src="$store.state.env.imgRootUrl + item.model_img_url">
+        <img :src="$store.state.env.imgRootUrl + item.modelImgUrl">
         <h3>{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
@@ -12,8 +12,8 @@
       <p class="fontSizeTitle" style="display: inline-block;">业务范围</p>
       <div style="margin-top: 0.46rem; display: flex;justify-content: space-around;padding: 0 1.83rem;">
         <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.95rem;width: 1.36rem">
-          <img :src="$store.state.env.imgRootUrl + item.model_img_url" style="width: 1.36rem;height: 1.55rem;">
-          <p class="fontSizeContent">{{ item.model_name }}</p>
+          <img :src="$store.state.env.imgRootUrl + item.bigModelImgUrl" style="width: 1.36rem;height: 1.55rem;">
+          <p class="fontSizeContent">{{ item.modelName }}</p>
         </div>
       </div>
     </div>
@@ -23,9 +23,9 @@
       <div style="margin-top: 0.46rem; display: flex;justify-content: space-around;padding: 0 2.08rem;">
         <div v-for="(item,index) in gongsiyoushiData" :key="index" style="height: 1.58rem;width: 1.32rem;text-align: center;">
           <div style="margin: 0 0.19rem;width: 0.94rem;height: 0.94rem;border-radius: 50%;background-color: #80a5c5;border: 0.02rem solid #fff;">
-            <p style="display: inline-block;line-height: 0.94rem;width: 100%;height: 100%;text-align: center;">{{ item.model_name }}</p>
+            <p style="display: inline-block;line-height: 0.94rem;width: 100%;height: 100%;text-align: center;">{{ item.modelName }}</p>
           </div>
-          <p class="fontSizeGongSiYouShiContent" v-html="item.model_brief"/>
+          <p class="fontSizeGongSiYouShiContent" v-html="item.modelBrief"/>
         </div>
       </div>
     </div>
@@ -34,10 +34,10 @@
       <p class="fontSizeChengGongAnLiTitle" style="display: inline-block;">成功案例</p>
       <div class="chenggonganli clear" style="margin-top: 0.46rem; padding: 0 1.83rem;">
         <div v-for="(item,index) in chenggonganliData" :key="index" class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img :src="$store.state.env.imgRootUrl + item.model_img_url" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
+          <img :src="$store.state.env.imgRootUrl + item.bigModelImgUrl" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
           <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.model_name }}</p>
-            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.model_brief }}</p>
+            <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.modelName }}</p>
+            <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.modelBrief }}</p>
             <p class="ilb fontSizeChengGongAnLiGengDuo">更多</p>
           </div>
         </div>
@@ -47,9 +47,9 @@
     <div class="meiguoGaiKuang">
       <p class="fontSizeMeiGuoGaiKuangTitle" style="display: inline-block;">美国概况</p>
       <div style="margin-top: 0.46rem; padding: 0 1.83rem;border-bottom: 0.87rem solid #f4f4f4;">
-        <el-carousel interval="90000000" indicator-position="none" height="1.55rem;">
+        <el-carousel :interval="3000" indicator-position="none" height="1.55rem;">
           <el-carousel-item v-for="(item,index) in meiguogaikuangData" :key="index">
-            <img v-for="(subItem,subIndex) in item" :key="subIndex" :src="$store.state.env.imgRootUrl + item[subIndex].model_img_url" style="height: 1.55rem;width: 1.35rem;" >
+            <img v-for="(subItem,subIndex) in item" :key="subIndex" :src="$store.state.env.imgRootUrl + item[subIndex].bigModelImgUrl" style="height: 1.55rem;width: 1.35rem;" >
           </el-carousel-item>
         </el-carousel>
       </div>

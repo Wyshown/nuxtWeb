@@ -1,37 +1,37 @@
 [
   {
     "id": "1",
-    "model_name": "境外培训轮播图",
-    "model_img_url": "changcheng/1shouye/1lunbotu/1.png",
-    "skip_url": "业务领域境外培训二级目录首页",
+    "modelName": "境外培训轮播图",
+    "modelImgUrl": "changcheng/1shouye/1lunbotu/1.png",
+    "skipUrl": "业务领域境外培训二级目录首页",
     "seq": "1"
   },
   {
     "id": "2",
-    "model_name": "境外考察轮播图",
-    "model_img_url": "changcheng/1shouye/1lunbotu/2.png",
-    "skip_url": "业务领域境外考察二级目录首页",
+    "modelName": "境外考察轮播图",
+    "modelImgUrl": "changcheng/1shouye/1lunbotu/2.png",
+    "skipUrl": "业务领域境外考察二级目录首页",
     "seq": "2"
   },
   {
     "id": "3",
-    "model_name": "人才引进轮播图",
-    "model_img_url": "changcheng/1shouye/1lunbotu/3.png",
-    "skip_url": "业务领域人才引进二级目录首页",
+    "modelName": "人才引进轮播图",
+    "modelImgUrl": "changcheng/1shouye/1lunbotu/3.png",
+    "skipUrl": "业务领域人才引进二级目录首页",
     "seq": "3"
   },
   {
     "id": "4",
-    "model_name": "会议会展轮播图",
-    "model_img_url": "changcheng/1shouye/1lunbotu/4.png",
-    "skip_url": "业务领域会议会展二级目录首页",
+    "modelName": "会议会展轮播图",
+    "modelImgUrl": "changcheng/1shouye/1lunbotu/4.png",
+    "skipUrl": "业务领域会议会展二级目录首页",
     "seq": "4"
   },
   {
     "id": "5",
-    "model_name": "项目实习轮播图",
-    "model_img_url": "changcheng/1shouye/1lunbotu/5.png",
-    "skip_url": "业务领域项目实习二级目录首页",
+    "modelName": "项目实习轮播图",
+    "modelImgUrl": "changcheng/1shouye/1lunbotu/5.png",
+    "skipUrl": "业务领域项目实习二级目录首页",
     "seq": "5"
   }
 ]

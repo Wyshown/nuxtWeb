@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: '【美国长城国际有限公司】',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,7 +21,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#3B8070' },
 
   /*
   ** Global CSS
@@ -36,7 +36,8 @@ module.exports = {
   */
   plugins: [
     { src: '~/plugins/my-rem', ssr: false },
-    { src: "@/plugins/element-ui", ssr: false}
+    { src: "@/plugins/element-ui", ssr: false},
+    { src: '~plugins/lazyload.js', ssr: true}
   ],
 
   /*
@@ -57,6 +58,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '/_mgcc/',
     /*
     ** You can extend webpack config here
     */
