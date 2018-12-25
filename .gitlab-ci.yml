@@ -4,33 +4,33 @@ stages:
  - deploy
 # 项目主目录 
 variables:
-  # 灜沣yf_mall项目的目录
+  # 灜沣yf_mall项目的目录 (全局变量)
   GITLAB_CI_PATH: ""
-  # 灜沣yf_mall的日志目录
+  # 灜沣yf_mall的日志目录 (全局变量)
   YF_MALL_LOG_PATH: ""
   
 log_job:
  stage: log
  only:
-  - web
+  - web  # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
   -  GITLAB_CI_PATH=`pwd`
   -  cd ..
   -  mkdir logs
  tags:
-  - yf_mall_prod
- allow_failure: true
+  - yf_mall_prod  # 配置的为设置-ci/cd -runner 中的tags便签
+ allow_failure: true # 允许上述代码失败
  
 stop_job:
  stage: stop
  only:
-  - web
+  - web # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
   -  echo "删除pm2 yf_mall_8205 的进程"
   -  pm2 delete yf_mall_8205
  tags:
-  - yf_mall_prod
- allow_failure: true
+  - yf_mall_prod  # 配置的为设置-ci/cd -runner 中的tags便签
+ allow_failure: true  # 允许上述代码失败
 
 deploy_job:
  stage: deploy
