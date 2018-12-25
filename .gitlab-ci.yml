@@ -11,9 +11,9 @@ stages:
       - echo "i am test test"
       - pwd
      tags:
-      - test
+      - han_prod
      only:
-      - test
+      - web # 仅仅通过gitLab页面打包, 不可以通过直接提交代码打包
 
 
     #job1:
