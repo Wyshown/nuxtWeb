@@ -1,0 +1,51 @@
+stages:
+     - test
+    # - ssh
+     - clean
+    # - package
+     - deploy
+
+    job0:
+     stage: test
+     script:
+      - echo "i am test test"
+      - pwd
+     tags:
+      - test
+     only:
+      - test
+
+
+    #job1:
+    # stage: ssh
+    # script:
+    #  - ssh -t -t root@47.100.46.209 -p 22
+
+    job2:
+     stage: clean
+     script:
+     - cd jsyf-parent
+     - mvn clean
+     tags:
+      - test
+     only:
+      - test
+
+
+    #job3:
+    # stage: package
+    # script:
+
+
+    job4:
+     stage: deploy
+     script:
+      - cd /home/gitlab-runner/....
+      - mvn package -P dev  #此处可以指定使用什么环境的配置文件进行打包（用什么环境打包就发布到对应的环境服务器）
+      - cd ~
+      - pwd
+      - ifconfig
+      - ./sys-service-deploy.sh
+     tags:            #这个标记的作用是 指定哪一个runner执行此任务（也就是说可以打包到不同环境的服务器上）
+      - test
+     only:            #这个标记的作用是 指定哪个分支 的提交操作会触发此任务
