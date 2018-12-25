@@ -1,9 +1,9 @@
 <template>
   <div class="left_tree">
     <div class="float_ul" style="width: 1.35rem;padding-left: 1.84rem;margin-top: 0.4rem;">
-      <p class="yewulingyu_theme">业务领域</p>
+      <p class="yewulingyu_theme">{{ moduleName }}</p>
       <div>
-        <div v-for="(item,index) in yewufanweiJson" :key="index" :class="{'bannerActive':selectedList === item.id}" class="catalog">
+        <div v-for="(item,index) in listModuleJson" :key="index" :class="{'bannerActive':selectedList === item.id}" class="catalog">
           <nuxt-link :to="{path: item.skipUrl}">
             <p class="ilb">{{ item.modelName }}</p>
           </nuxt-link>
@@ -15,10 +15,16 @@
 <script>
 export default {
   props: {
-    yewufanweiJson: {
+    listModuleJson: {
       type: Array,
       default: () => {
         return []
+      }
+    },
+    moduleName: {
+      type: String,
+      default: () => {
+        return '业务领域'
       }
     },
     selectedList: {
@@ -29,6 +35,7 @@ export default {
     }
   },
   mounted() {
+    console.log('moduleName,', this.moduleName)
     console.log('this.selectedList231', this.selectedList)
   }
 }
@@ -69,6 +76,12 @@ export default {
   }
   .bannerActive:hover {
     color: #fff;
+  }
+  .catalog:hover:not(.bannerActive) {
+    background-color: #d1eaff;
+    a {
+      color: #004a8a;
+    }
   }
 }
 </style>

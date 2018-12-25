@@ -12,7 +12,7 @@
       <p class="fontSizeTitle" style="display: inline-block;">业务范围</p>
       <div style="margin-top: 0.46rem; display: flex;justify-content: space-around;padding: 0 1.83rem;">
         <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.95rem;width: 1.36rem">
-          <img :src="$store.state.env.imgRootUrl + item.bigModelImgUrl" style="width: 1.36rem;height: 1.55rem;">
+          <img :src="$store.state.env.imgRootUrl + item.smallModelImgUrl" style="width: 1.36rem;height: 1.55rem;">
           <p class="fontSizeContent">{{ item.modelName }}</p>
         </div>
       </div>
@@ -34,7 +34,7 @@
       <p class="fontSizeChengGongAnLiTitle" style="display: inline-block;">成功案例</p>
       <div class="chenggonganli clear" style="margin-top: 0.46rem; padding: 0 1.83rem;">
         <div v-for="(item,index) in chenggonganliData" :key="index" class="float_ul" style="height: 1.14rem;width: 4.46rem;margin-bottom: 20px;">
-          <img :src="$store.state.env.imgRootUrl + item.bigModelImgUrl" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
+          <img :src="$store.state.env.imgRootUrl + item.smallModelImgUrl" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
           <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
             <p class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.modelName }}</p>
             <p class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.modelBrief }}</p>
@@ -49,7 +49,7 @@
       <div style="margin-top: 0.46rem; padding: 0 1.83rem;border-bottom: 0.87rem solid #f4f4f4;">
         <el-carousel :interval="3000" indicator-position="none" height="1.55rem;">
           <el-carousel-item v-for="(item,index) in meiguogaikuangData" :key="index">
-            <img v-for="(subItem,subIndex) in item" :key="subIndex" :src="$store.state.env.imgRootUrl + item[subIndex].bigModelImgUrl" style="height: 1.55rem;width: 1.35rem;" >
+            <img v-for="(subItem,subIndex) in item" :key="subIndex" :src="$store.state.env.imgRootUrl + item[subIndex].smallModelImgUrl" style="height: 1.55rem;width: 1.35rem;" >
           </el-carousel-item>
         </el-carousel>
       </div>

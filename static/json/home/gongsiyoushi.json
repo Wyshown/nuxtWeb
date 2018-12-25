@@ -2,33 +2,37 @@
   {
     "id": "1",
     "modelName": "资质",
-    "bigModelImgUrl": "changcheng/1shouye/3gongsiyoushi/1.png",
+    "smallModelImgUrl": "changcheng/1shouye/3gongsiyoushi/1.png",
+    "modelImgUrl":"changcheng/6erjiyemian/6.png",
     "modelBrief": "20年<br/>外专局认证培训渠道",
-    "skipUrl": "跳转到公司优势资源二级页面",
+    "skipUrl": "/gongsiyoushi/2",
     "seq": "1"
   },
   {
     "id": "2",
     "modelName": "资源",
-    "bigModelImgUrl": "changcheng/1shouye/3gongsiyoushi/2.png",
+    "smallModelImgUrl": "changcheng/1shouye/3gongsiyoushi/2.png",
+    "modelImgUrl":"changcheng/6erjiyemian/6.png",
     "modelBrief": "500+政、商领袖资源<br/>10000+智库资源",
-    "skipUrl": "跳转到公司优势资源二级页面",
+    "skipUrl": "/gongsiyoushi/2",
     "seq": "2"
   },
   {
     "id": "3",
     "modelName": "经验",
-    "bigModelImgUrl": "changcheng/1shouye/3gongsiyoushi/3.png",
+    "smallModelImgUrl": "changcheng/1shouye/3gongsiyoushi/3.png",
+    "modelImgUrl":"changcheng/6erjiyemian/7.png",
     "modelBrief": "25年政府项目保障经验<br/>2000+咨询培训项目<br/>60000+培训学员",
-    "skipUrl": "跳转到公司优势经验二级页面",
+    "skipUrl": "/gongsiyoushi/3",
     "seq": "3"
   },
   {
     "id": "4",
     "modelName": "服务",
-    "bigModelImgUrl": "changcheng/1shouye/3gongsiyoushi/4.png",
+    "smallModelImgUrl": "changcheng/1shouye/3gongsiyoushi/4.png",
+    "modelImgUrl":"changcheng/6erjiyemian/8.png",
     "modelBrief": "6对1专属服务<br/>24小时无时差办公<br/>100余行业精英团队",
-    "skipUrl": "跳转到公司优势服务二级页面",
+    "skipUrl": "/gongsiyoushi/4",
     "seq": "4"
   }
 ]

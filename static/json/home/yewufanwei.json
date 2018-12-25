@@ -2,7 +2,7 @@
   {
     "id": "1",
     "modelName": "境外培训",
-    "bigModelImgUrl": "changcheng/1shouye/2yewufanwei/1.png",
+    "smallModelImgUrl": "changcheng/1shouye/2yewufanwei/1.png",
     "modelImgUrl":"changcheng/6erjiyemian/1.png",
     "skipUrl": "/yewulingyu/1",
     "seq": "1"
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "modelName": "境外考察",
-    "bigModelImgUrl": "changcheng/1shouye/2yewufanwei/2.png",
+    "smallModelImgUrl": "changcheng/1shouye/2yewufanwei/2.png",
     "modelImgUrl":"changcheng/6erjiyemian/2.png",
     "skipUrl": "/yewulingyu/2",
     "seq": "2"
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "modelName": "人才引进",
-    "bigModelImgUrl": "changcheng/1shouye/2yewufanwei/3.png",
+    "smallModelImgUrl": "changcheng/1shouye/2yewufanwei/3.png",
     "modelImgUrl":"changcheng/6erjiyemian/3.png",
     "skipUrl": "/yewulingyu/3",
     "seq": "3"
@@ -26,7 +26,7 @@
   {
     "id": "4",
     "modelName": "会议会展",
-    "bigModelImgUrl": "changcheng/1shouye/2yewufanwei/4.png",
+    "smallModelImgUrl": "changcheng/1shouye/2yewufanwei/4.png",
     "modelImgUrl":"changcheng/6erjiyemian/4.png",
     "skipUrl": "/yewulingyu/4",
     "seq": "4"
@@ -34,7 +34,7 @@
   {
     "id": "5",
     "modelName": "项目实习",
-    "bigModelImgUrl": "changcheng/1shouye/2yewufanwei/5.png",
+    "smallModelImgUrl": "changcheng/1shouye/2yewufanwei/5.png",
     "modelImgUrl":"changcheng/6erjiyemian/5.png",
     "skipUrl": "/yewulingyu/5",
     "seq": "5"

@@ -2,7 +2,7 @@
   <main class="yewulingyu">
     <v-zhan-wei-tu :imgJsonObj="imgJsonObjModule" :crumbsList="crumbsList"/>
     <div class="clear" style="min-height: 5rem;">
-      <v-left-tree :yewufanweiJson="yewufanweiData" :selectedList="selectYeWuLingYu"/>
+      <v-left-tree :listModuleJson="yewufanweiData" :selectedList="selectYeWuLingYu" :moduleName="moduleNameData"/>
       <v-list-module :listModule = "listModuleData"/>
     </div>
   </main>
@@ -20,6 +20,7 @@ export default {
   },
   data() {
     return {
+      moduleNameData: '业务领域',
       // 业务范围
       yewufanweiData: [],
       selectYeWuLingYu: '',
@@ -62,8 +63,7 @@ export default {
     }
     console.log('this.$route.params.yewulingyu, this.listModuleData')
     console.log(this.$route.params.yewulingyu, this.listModuleData)
-  },
-  mounted() {
+
     // 业务范围
     this.yewufanweiData = yewufanweiJson
     // 选中的业务领域

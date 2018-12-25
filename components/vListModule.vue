@@ -1,6 +1,6 @@
 <template>
   <div class="listModule">
-    <div class="float_ul" style="width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
+    <div class="float_ul" style="min-height:6rem;width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
       <div v-for="(item,index) in forListModule" :key="index" class="yewulingyu_for_div clear img_hover_big">
         <nuxt-link :to="{path: '/yewulingyu/detail/' + $route.params.yewulingyu + '_' + ((page - 1) * rows + index + 1)}">
           <img :src="$store.state.env.imgRootUrl + item.themeImgUrl" class="float_ul" style="width: 2.12rem;height: 1.56rem;">

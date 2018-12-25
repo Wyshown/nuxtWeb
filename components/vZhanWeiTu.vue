@@ -23,13 +23,14 @@ export default {
       type: Object,
       default: () => {
         return {
-          name: '境外培训',
-          modelImgUrl: 'changcheng/6erjiyemian/1.png'
+          name: '',
+          modelImgUrl: ''
         }
       }
     }
   },
   mounted() {
+    console.log('imgJsonObj,', this.imgJsonObj)
     console.log(this.$store.state.env.imgRootUrl + this.imgJsonObj.modelImgUrl)
   }
 }
