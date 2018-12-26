@@ -11,7 +11,7 @@
     <div style="height: 3.64rem;background-color: #f4f4f4">
       <p class="fontSizeTitle" style="display: inline-block;">业务范围</p>
       <div style="margin-top: 0.46rem; display: flex;justify-content: space-around;padding: 0 1.83rem;">
-        <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.95rem;width: 1.36rem">
+        <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.98rem;width: 1.36rem">
           <img :src="$store.state.env.imgRootUrl + item.smallModelImgUrl" style="width: 1.36rem;height: 1.55rem;">
           <p class="fontSizeContent">{{ item.modelName }}</p>
         </div>

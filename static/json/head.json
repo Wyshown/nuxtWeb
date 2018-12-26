@@ -17,11 +17,16 @@
   {
     "name":"成功案例",
     "enName":"chenggonganli",
-    "url":"http://www.google.com"
+    "url":"/chenggonganli"
   },
   {
     "name":"美国概况",
-    "enName":"meiguogaikuo",
-    "url":"http://www.baidu.com"
+    "enName":"meiguogaikuang",
+    "url":"/meiguogaikuang"
+  },
+  {
+    "name":"关于我们",
+    "enName":"aboutus",
+    "url":"/aboutus"
   }
 ]

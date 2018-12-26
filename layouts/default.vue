@@ -2,7 +2,9 @@
   <div style="background-color: #e5e5e5">
     <!--此处为公众头部信息-->
     <div class="fixed-head shouye" style="width: 12.8rem;height: 0.80rem;margin:0px auto;background: #FFFFFF;display: flex;align-items: center;">
-      <img class="ilb float_ul" style="margin-left: 1.85rem;" src="~/static/img/logo.png">
+      <nuxt-link :to="{path: '/'}">
+        <img class="ilb float_ul" style="margin-left: 1.85rem;" src="~/static/img/logo.png">
+      </nuxt-link>
       <ul class="ilb float_ul" style="font-size: 0.17rem;margin-left: 1.55rem;height: 0.80rem;">
         <li v-for="(headList,index) in headListData" :key="index" :class="{'active':headList.enName==navigationSelect}" style="height: 0.80rem;">
           <a :href="headList.url" :class="{'activeFont':headList.enName==navigationSelect}" >{{ headList.name }}</a>

@@ -4,8 +4,8 @@ const YEWULINGYU = {
       jingWaiPeiXunJson: [
         {
           id: '1',
-          businessType: '境外培训',
           themeName: '创新创业专题',
+          businessType: '境外培训',
           themeImgUrl: 'changcheng/2yewulingyu/1jingwaipeixun/1smallImg/1.png',
           modelImgUrl: 'changcheng/2yewulingyu/1jingwaipeixun/2bigImg/1.png',
           themeBrief:

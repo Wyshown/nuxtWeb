@@ -4,9 +4,9 @@
     <v-zhan-wei-tu :imgJsonObj="imgJsonObjModule" :crumbsList="crumbsList"/>
     <div class="clear" style="min-height: 5rem;">
       <!--左侧菜单-->
-      <v-left-tree :yewufanweiJson="yewufanweiData" :selectedList="selectYeWuLingYu"/>
+      <v-left-tree :listModuleJson="yewufanweiData" :selectedList="selectYeWuLingYu"/>
       <!--详情页面-->
-      <div class="float_ul" style="padding-bottom:2rem;width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
+      <div class="float_ul" style="padding-bottom:1rem;width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
         <p v-html="yeWuFanWeiDetailJson.themeDetails"/>
       </div>
     </div>
@@ -45,7 +45,6 @@ export default {
     }
   },
   beforeMount() {
-    debugger
     // 业务范围
     this.yewufanweiData = yewufanweiJson
     // 境外培训
