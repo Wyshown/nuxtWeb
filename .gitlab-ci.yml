@@ -4,9 +4,9 @@ stages:
  - deploy
 # 项目主目录 
 variables:
-  # 灜沣yf_mall项目的目录 (全局变量)
+  # 项目的目录 (全局变量)
   GITLAB_CI_PATH: ""
-  # 灜沣yf_mall的日志目录 (全局变量)
+  # 项目的日志目录 (全局变量)
   LOG_PATH: ""
   
 log_job:
@@ -29,7 +29,7 @@ stop_job:
   -  echo "删除pm2 yf_mall_8205 的进程"
   -  pm2 delete yf_mall_8205
  tags:
-  - yf_mall_prod  # 配置的为设置-ci/cd -runner 中的tags便签
+  - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true  # 允许上述代码失败
 
 deploy_job:
@@ -56,4 +56,4 @@ deploy_job:
   -  pm2 start npm --name "yf_mall_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
 
  tags:
-  - yf_mall_prod
+  - changcheng_prod
