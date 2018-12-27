@@ -7,7 +7,7 @@ variables:
   # 灜沣yf_mall项目的目录 (全局变量)
   GITLAB_CI_PATH: ""
   # 灜沣yf_mall的日志目录 (全局变量)
-  YF_MALL_LOG_PATH: ""
+  LOG_PATH: ""
   
 log_job:
  stage: log
@@ -39,7 +39,7 @@ deploy_job:
  script:
   -  GITLAB_CI_PATH=`pwd`
   -  cd ../logs
-  -  YF_MALL_LOG_PATH=`pwd`
+  -  LOG_PATH=`pwd`
   
   -  echo "执行cnpm install操作"
   -  cd $GITLAB_CI_PATH &&  cnpm install
@@ -53,7 +53,7 @@ deploy_job:
   -  cd $GITLAB_CI_PATH && ./nuxt build
 
   -  echo "执行pm2线程守护"
-  -  pm2 start npm --name "yf_mall_8205" -e $YF_MALL_LOG_PATH/nuxterr.log -o $YF_MALL_LOG_PATH/nuxtout.log -i 2 -- run start
+  -  pm2 start npm --name "yf_mall_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
 
  tags:
   - yf_mall_prod
