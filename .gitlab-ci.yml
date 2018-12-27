@@ -42,6 +42,8 @@ deploy_job:
   -  LOG_PATH=`pwd`
   
   -  echo "执行cnpm install操作"
+  -  echo "打印路径"
+  -  echo $GITLAB_CI_PATH
   -  cd $GITLAB_CI_PATH &&  cnpm install
   -  echo "添加软链接"
   -  ln -s ./node_modules/nuxt/bin/nuxt ./nuxt
