@@ -18,10 +18,10 @@ log_job:
   
   -  if [ ! -d '$LOG_PATH/../logs' ];then
   -  cd ..
-  -  mkdir /data
-  - else
-  - echo "slog文件夹已经存在, 不需要重新创建"
-  - fi
+  -  mkdir logs
+  -  else
+  -  echo "slog文件夹已经存在, 不需要重新创建"
+  -  fi
  tags:
   - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true # 允许上述代码失败
@@ -29,7 +29,7 @@ log_job:
 stop_job:
  stage: stop
  only:
-  - web # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
+  -  web # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
   -  echo "删除pm2 changcheng_8205 的进程"
   -  pm2 delete changcheng_8205
