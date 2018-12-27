@@ -18,7 +18,7 @@ log_job:
   -  cd ..
   -  mkdir logs
  tags:
-  - yf_mall_prod  # 配置的为设置-ci/cd -runner 中的tags便签
+  - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true # 允许上述代码失败
  
 stop_job:
