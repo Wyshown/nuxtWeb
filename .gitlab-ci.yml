@@ -46,7 +46,7 @@ deploy_job:
   -  echo $GITLAB_CI_PATH
   -  cd $GITLAB_CI_PATH &&  cnpm install
   -  echo "添加软链接"
-  -  ln -s ./node_modules/nuxt/bin/nuxt ./nuxt
+  -  ln -s ./node_modules/nuxt/bin/nuxt.js ./nuxt
 
   -  echo "------------ 休息3秒--------------"
   -  sleep 3
