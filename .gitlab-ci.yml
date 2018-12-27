@@ -55,7 +55,7 @@ deploy_job:
   -  cd $GITLAB_CI_PATH && ./nuxt build
 
   -  echo "执行pm2线程守护"
-  -  pm2 start npm --name "changchengl_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
+  -  pm2 start npm --name "changcheng_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
 
  tags:
   - changcheng_prod
