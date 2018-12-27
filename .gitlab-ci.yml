@@ -15,8 +15,13 @@ log_job:
   - web  # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
   -  GITLAB_CI_PATH=`pwd`
+  
+  -  if [ ! -d '$LOG_PATH/../logs' ];then
   -  cd ..
-  -  mkdir logs
+  -  mkdir /data
+  - else
+  - echo "slog文件夹已经存在, 不需要重新创建"
+  - fi
  tags:
   - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true # 允许上述代码失败
