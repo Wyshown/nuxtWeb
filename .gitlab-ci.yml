@@ -15,19 +15,24 @@ log_job:
   - web  # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
   -  GITLAB_CI_PATH=`pwd`
+  
+  -  if [ ! -d '$LOG_PATH/../logs' ];then
   -  cd ..
   -  mkdir logs
+  -  else
+  -  echo "slog文件夹已经存在, 不需要重新创建"
+  -  fi
  tags:
-  - yf_mall_prod  # 配置的为设置-ci/cd -runner 中的tags便签
+  - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true # 允许上述代码失败
  
 stop_job:
  stage: stop
  only:
-  - web # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
+  -  web # 只可以通过gitlab网页端提交, 不可提交代码的时候便提交
  script:
-  -  echo "删除pm2 changchengl_8205 的进程"
-  -  pm2 delete changchengl_8205
+  -  echo "删除pm2 changcheng_8205 的进程"
+  -  pm2 delete changcheng_8205
  tags:
   - changcheng_prod  # 配置的为设置-ci/cd -runner 中的tags便签
  allow_failure: true  # 允许上述代码失败
@@ -42,9 +47,11 @@ deploy_job:
   -  LOG_PATH=`pwd`
   
   -  echo "执行cnpm install操作"
+  -  echo "打印路径"
+  -  echo $GITLAB_CI_PATH
   -  cd $GITLAB_CI_PATH &&  cnpm install
   -  echo "添加软链接"
-  -  ln -s ./node_modules/nuxt/bin/nuxt ./nuxt
+  -  ln -s ./node_modules/nuxt/bin/nuxt.js ./nuxt
 
   -  echo "------------ 休息3秒--------------"
   -  sleep 3
@@ -53,7 +60,7 @@ deploy_job:
   -  cd $GITLAB_CI_PATH && ./nuxt build
 
   -  echo "执行pm2线程守护"
-  -  pm2 start npm --name "changchengl_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
+  -  pm2 start npm --name "changcheng_8205" -e $LOG_PATH/nuxterr.log -o $LOG_PATH/nuxtout.log -i 2 -- run start
 
  tags:
   - changcheng_prod
