@@ -6,7 +6,7 @@
       <!--左侧菜单-->
       <v-left-tree :listModuleJson="yewufanweiData" :selectedList="selectYeWuLingYu"/>
       <!--详情页面-->
-      <div class="float_ul" style="padding-bottom:1rem;width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
+      <div class="float_ul" style="line-height: 0.24rem;padding-bottom:1rem;width: 7.05rem;margin-top: 0.72rem;margin-left: 0.72rem;margin-right: 1.84rem;border-top: 1px solid #515862;">
         <p v-html="yeWuFanWeiDetailJson.themeDetails"/>
       </div>
     </div>

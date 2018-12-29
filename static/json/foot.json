@@ -5,31 +5,31 @@
       {
         "id": "1",
         "modelName": "境外培训",
-        "skipUrl": "境外培训",
+        "skipUrl": "/yewulingyu/1",
         "skipForm": "_self"
       },
       {
         "id": "2",
         "modelName": "境外考察",
-        "skipUrl": "境外考察",
+        "skipUrl": "/yewulingyu/2",
         "skipForm": "_self"
       },
       {
         "id": "3",
         "modelName": "人才引进",
-        "skipUrl": "人才引进",
+        "skipUrl": "/yewulingyu/3",
         "skipForm": "_self"
       },
       {
         "id": "4",
         "modelName": "会议会展",
-        "skipUrl": "会议会展",
+        "skipUrl": "/yewulingyu/4",
         "skipForm": "_self"
       },
       {
         "id": "5",
         "modelName": "项目实习",
-        "skipUrl": "项目实习",
+        "skipUrl": "/yewulingyu/5",
         "skipForm": "_self"
       }
     ]
@@ -40,25 +40,25 @@
       {
         "id": "1",
         "modelName": "资质",
-        "skipUrl": "资质",
+        "skipUrl": "/gongsiyoushi/1",
         "skipForm": "_self"
       },
       {
         "id": "2",
         "modelName": "资源",
-        "skipUrl": "资源",
+        "skipUrl": "/gongsiyoushi/2",
         "skipForm": "_self"
       },
       {
         "id": "3",
         "modelName": "经验",
-        "skipUrl": "经验",
+        "skipUrl": "/gongsiyoushi/3",
         "skipForm": "_self"
       },
       {
         "id": "4",
         "modelName": "服务",
-        "skipUrl": "服务",
+        "skipUrl": "/gongsiyoushi/4",
         "skipForm": "_self"
       }
     ]
@@ -69,31 +69,31 @@
       {
         "id": "1",
         "modelName": "培训 ",
-        "skipUrl": "培训 ",
+        "skipUrl": "/chenggonganli",
         "skipForm": "_self"
       },
       {
         "id": "2",
         "modelName": "考察",
-        "skipUrl": "考察",
+        "skipUrl": "/chenggonganli",
         "skipForm": "_self"
       },
       {
         "id": "3",
         "modelName": "人才 ",
-        "skipUrl": "人才 ",
+        "skipUrl": "/chenggonganli ",
         "skipForm": "_self"
       },
       {
         "id": "4",
         "modelName": "会议",
-        "skipUrl": "会议",
+        "skipUrl": "/chenggonganli",
         "skipForm": "_self"
       },
       {
         "id": "5",
         "modelName": "实习 ",
-        "skipUrl": "实习 ",
+        "skipUrl": "/chenggonganli ",
         "skipForm": "_self"
       }
     ]
@@ -104,19 +104,13 @@
       {
         "id": "1",
         "modelName": "公司介绍",
-        "skipUrl": "公司介绍",
+        "skipUrl": "/aboutus",
         "skipForm": "_self"
       },
       {
         "id": "2",
         "modelName": "境外合作单位",
-        "skipUrl": "境外合作单位",
-        "skipForm": "_self"
-      },
-      {
-        "id": "3",
-        "modelName": "资质认证",
-        "skipUrl": "资质认证",
+        "skipUrl": "/gongsiyoushi/2",
         "skipForm": "_self"
       }
     ]

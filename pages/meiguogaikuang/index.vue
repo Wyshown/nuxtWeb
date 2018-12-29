@@ -37,6 +37,11 @@ export default {
   beforeMount() {
     // 添加面包屑
     this.pushCrumbsList()
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
   },
   mounted() {
     this.meiGuoGaiKuangData = this.$store.state.smallImg.meiGuoGaiKuangJson

@@ -66,10 +66,10 @@ img{
     background-repeat: no-repeat;
 }
 .clear:after{
-  content:'';
-  display:block;
-  clear:both;
-}
+   content:'';
+   display:block;
+   clear:both;
+ }
 .pull-left{
   float: left;
 }
@@ -152,16 +152,7 @@ img{
   transform: scale(1.05);
   cursor: pointer;
 }
-// 固定头部
-.fixed-head{
-  position: fixed;
-  top:0;
-  z-index: 100;
-  width:100%;
-  margin:0 auto;
-  left:0;
-  right:0;
-}
+
 .el-pager li {
   height: 0.42rem;
   line-height: 0.42rem;

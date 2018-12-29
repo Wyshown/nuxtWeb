@@ -43,6 +43,8 @@ export default {
   beforeMount() {
     // 获得路径上的参数, 选择左侧树菜单
     this.selectYeWuLingYu = this.$route.params.gongsiyoushi
+
+    console.log('this.$route.params:', this.$route)
     // 公司优势
     this.gongSiYoushiData = gongSiYoushiJson
 

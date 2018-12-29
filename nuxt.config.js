@@ -21,8 +21,8 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' },
-
+  // loading: { color: '#3B8070' },
+  loading: './components/loading.vue',
   /*
   ** Global CSS
   */
@@ -54,11 +54,18 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  // 取消打包以后，每个页面都有组件的所有代码 只引入当前页面使用的组件
+  render: {
+    resourceHints: false
+  },
   /*
   ** Build configuration
   */
   build: {
     publicPath: '/_mgcc/',
+    extractCSS: {
+      allChunks: true
+    },
     /*
     ** You can extend webpack config here
     */

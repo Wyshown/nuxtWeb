@@ -4,10 +4,16 @@
   "description": "韩武洽搭建测试项目",
   "author": "韩武洽",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": 4000
+    }
+  },
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "PORT=8205 nuxt start",
+    "build": "nuxt build && npm start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
