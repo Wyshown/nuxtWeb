@@ -3,7 +3,9 @@
     <!--轮播图-->
     <el-carousel height="4.95rem">
       <el-carousel-item v-for="(item,index) in lunboData" :key="index">
-        <img v-lazy="$store.state.env.imgRootUrl + item.modelImgUrl">
+        <nuxt-link :to="{path: item.skipUrl}">
+          <img v-lazy="$store.state.env.imgRootUrl + item.modelImgUrl">
+        </nuxt-link>
       </el-carousel-item>
     </el-carousel>
     <!--业务范围-->

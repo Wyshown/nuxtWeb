@@ -3,35 +3,35 @@
     "id": "1",
     "modelName": "境外培训轮播图",
     "modelImgUrl": "changcheng/1shouye/1lunbotu/1.png",
-    "skipUrl": "业务领域境外培训二级目录首页",
+    "skipUrl": "/yewulingyu/1",
     "seq": "1"
   },
   {
     "id": "2",
     "modelName": "境外考察轮播图",
     "modelImgUrl": "changcheng/1shouye/1lunbotu/2.png",
-    "skipUrl": "业务领域境外考察二级目录首页",
+    "skipUrl": "/yewulingyu/2",
     "seq": "2"
   },
   {
     "id": "3",
     "modelName": "人才引进轮播图",
     "modelImgUrl": "changcheng/1shouye/1lunbotu/3.png",
-    "skipUrl": "业务领域人才引进二级目录首页",
+    "skipUrl": "/yewulingyu/3",
     "seq": "3"
   },
   {
     "id": "4",
     "modelName": "会议会展轮播图",
     "modelImgUrl": "changcheng/1shouye/1lunbotu/4.png",
-    "skipUrl": "业务领域会议会展二级目录首页",
+    "skipUrl": "/yewulingyu/4",
     "seq": "4"
   },
   {
     "id": "5",
     "modelName": "项目实习轮播图",
     "modelImgUrl": "changcheng/1shouye/1lunbotu/5.png",
-    "skipUrl": "业务领域项目实习二级目录首页",
+    "skipUrl": "/yewulingyu/5",
     "seq": "5"
   }
 ]

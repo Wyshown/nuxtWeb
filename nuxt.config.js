@@ -62,10 +62,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '/_mgcc/',
-    extractCSS: {
-      allChunks: true
+    // .babelrc配置
+    babel: {
+      ignore: [
+        './components/loading.vue' //这些文件可以使用非严格模式
+      ]
     },
+    publicPath: '/_mgcc/',
     /*
     ** You can extend webpack config here
     */
