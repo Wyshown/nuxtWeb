@@ -36,10 +36,6 @@ export default {
       forListModule: []
     }
   },
-  beforeMount() {
-    console.log('this.jingWaiPeiXunData', this.listModule)
-    // 境外培训
-  },
   mounted() {
     console.log('this.listModule', this.listModule)
     this.total = this.listModule.length

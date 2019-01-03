@@ -33,11 +33,6 @@ export default {
         return ''
       }
     }
-  },
-  mounted() {
-    console.log('listModuleJson,', this.listModuleJson)
-    console.log('moduleName,', this.moduleName)
-    console.log('this.selectedList231', this.selectedList)
   }
 }
 </script>

@@ -49,6 +49,8 @@ export default {
     this.aboutUsDetail.themeDetails = base64.decode(
       this.aboutUsDetail.themeDetails
     )
+  },
+  mounted() {
     // 添加面包屑
     this.pushCrumbsList()
   },

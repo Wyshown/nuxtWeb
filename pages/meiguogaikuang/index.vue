@@ -34,18 +34,9 @@ export default {
       }
     }
   },
-  beforeMount() {
+  mounted() {
     // 添加面包屑
     this.pushCrumbsList()
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  },
-  mounted() {
-    console.log('meiGuoGaiKuangData', this.$store.state.smallImg)
-    console.log('meiGuoGaiKuangData', this.$store.state)
   },
   methods: {
     pushCrumbsList() {
@@ -71,7 +62,6 @@ export default {
 .chengGongAnLi {
   background: #f4f4f4;
   .p1Class {
-    width: 0.64rem;
     height: 0.16rem;
     font-size: 0.16rem;
     font-weight: 400;
@@ -80,7 +70,6 @@ export default {
     margin-top: 0.4rem;
   }
   .p2Class {
-    width: 0.93rem;
     height: 0.23rem;
     font-size: 0.22rem;
     font-weight: 400;

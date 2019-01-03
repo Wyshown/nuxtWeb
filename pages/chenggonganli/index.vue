@@ -36,13 +36,9 @@ export default {
       }
     }
   },
-  beforeMount() {
+  mounted() {
     // 添加面包屑
     this.pushCrumbsList()
-  },
-  mounted() {
-    console.log('chengGongAnLiImgData', this.chengGongAnLiImgData)
-    console.log('this.$store.state', this.$store.state)
   },
   methods: {
     pushCrumbsList() {
@@ -71,7 +67,6 @@ export default {
     margin-right: 0.13rem;
   }
   .p1Class {
-    width: 0.64rem;
     height: 0.16rem;
     font-size: 0.16rem;
     font-family: MicrosoftYaHei;
@@ -80,7 +75,6 @@ export default {
     line-height: 0.21rem;
   }
   .p2Class {
-    width: 8.85rem;
     height: 0.78rem;
     font-size: 0.14rem;
     font-family: MicrosoftYaHei;

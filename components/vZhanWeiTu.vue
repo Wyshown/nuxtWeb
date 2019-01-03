@@ -20,7 +20,12 @@ export default {
     crumbsList: {
       type: Array,
       default: () => {
-        return []
+        return [
+          {
+            name: '业务领域',
+            pathMoudle: '/yewulingyu/1'
+          }
+        ]
       }
     },
     imgJsonObj: {
@@ -37,18 +42,22 @@ export default {
     crumbsList: {
       handler(newValue, oldValue) {
         console.log('------------------1-----------1han-')
-        console.log('newValue: ', newValue)
-        console.log('oldValue: ', oldValue)
+        console.log('1-----------1han-newValue: ', newValue)
+        console.log('1-----------1han-oldValue: ', oldValue)
         this.crumbsList = newValue
-      }
+      },
+      // 深度观察监听
+      deep: true
     },
     imgJsonObj: {
       handler(newValue, oldValue) {
-        console.log('------------------222---------1han-')
-        console.log('newValue: ', newValue)
-        console.log('oldValue: ', oldValue)
+        console.log('------------------222---------2han-')
+        console.log('------222---------2han-newValue: ', newValue)
+        console.log('------222---------2han-oldValue: ', oldValue)
         this.imgJsonObj = newValue
-      }
+      },
+      // 深度观察监听
+      deep: true
     }
   },
   mounted() {
@@ -77,6 +86,7 @@ export default {
       height: 0.16rem;
       font-size: 0.16rem;
       height: 100%;
+      color: #515862;
     }
   }
 }

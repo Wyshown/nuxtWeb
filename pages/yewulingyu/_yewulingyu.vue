@@ -22,7 +22,7 @@ export default {
     return {
       moduleNameData: '业务领域',
       // 业务范围
-      yewufanweiData: [],
+      yewufanweiData: yewufanweiJson,
       selectYeWuLingYu: '',
       // 传入 vListModule 组件中的值
       listModuleData: [],
@@ -32,24 +32,6 @@ export default {
       imgJsonObjModule: {
         name: '境外培训',
         modelImgUrl: 'changcheng/6erjiyemian/1.png'
-      }
-    }
-  },
-  watch: {
-    crumbsList: {
-      handler(newValue, oldValue) {
-        console.log('------------------1-----------1han-')
-        console.log('newValue: ', newValue)
-        console.log('oldValue: ', oldValue)
-        this.crumbsList = newValue
-      }
-    },
-    imgJsonObj: {
-      handler(newValue, oldValue) {
-        console.log('------------------222---------1han-')
-        console.log('newValue: ', newValue)
-        console.log('oldValue: ', oldValue)
-        this.imgJsonObj = newValue
       }
     }
   },
@@ -78,13 +60,13 @@ export default {
     else {
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiPeiXunJson
     }
-    // 业务范围
-    this.yewufanweiData = yewufanweiJson
     // 选中的业务领域
     this.selectYeWuLingYu = this.$route.params.yewulingyu
     if (!this.selectYeWuLingYu) {
       this.selectYeWuLingYu = '1'
     }
+  },
+  mounted() {
     // 添加面包屑
     this.pushCrumbsList()
   },

@@ -27,7 +27,7 @@ export default {
     return {
       detailId: '',
       // 业务范围
-      yewufanweiData: [],
+      yewufanweiData: yewufanweiJson,
       selectYeWuLingYu: '',
       // 业务范围列表页的数据, 根据
       listModuleData: [],
@@ -45,9 +45,6 @@ export default {
     }
   },
   beforeMount() {
-    // 业务范围
-    this.yewufanweiData = yewufanweiJson
-    // 境外培训
     // 根据导航栏信息 判断出属于哪个范围
     if (this.$route.params.listIndex.includes('_')) {
       // 选中的业务领域
@@ -85,30 +82,18 @@ export default {
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiPeiXunJson
     }
 
-    console.log('listModuleData:', this.listModuleData)
-    console.log('detailId:', this.detailId)
-
     // 业务详情的详情页面数据
     this.yeWuFanWeiDetailJson = this.listModuleData[this.detailId - 1]
 
-    // 业务详情页面的占位图数据
-    console.log('---1- ', this.yewufanweiData)
-    console.log('---2- ', this.selectYeWuLingYu)
-
     this.yewufanweiObjData = this.yewufanweiData[this.selectYeWuLingYu - 1]
-    console.log('selectYeWuLingYu:', this.selectYeWuLingYu)
-    console.log('业务详情的详情页面数据: ', this.yeWuFanWeiDetailJson)
-    console.log('业务详情列表页面的数据', this.yewufanweiObjData)
   },
   mounted() {
-    console.log('mounted:', this.yeWuFanWeiDetailJson)
     this.yeWuFanWeiDetailJson = JSON.parse(
       JSON.stringify(this.yeWuFanWeiDetailJson)
     )
     this.yeWuFanWeiDetailJson.themeDetails = base64.decode(
       this.yeWuFanWeiDetailJson.themeDetails
     )
-    console.log('thisyeWuFanWeiDetailJson:', this.yeWuFanWeiDetailJson)
     // 添加面包屑
     this.pushCrumbsList()
   },
@@ -129,7 +114,6 @@ export default {
       this.crumbsList.push(yeWuLingYuCrumb)
 
       // 业务领域 下的二级分类加入到 面包屑 中
-      console.log('业务领域下的二级分类加入到面包屑中:', this.yewufanweiObjData)
       pushYeWuLingYuCrumb = {}
       pushYeWuLingYuCrumb.name = this.yewufanweiObjData.modelName
       pushYeWuLingYuCrumb.pathMoudle = '/yewulingyu/' + this.selectYeWuLingYu
@@ -137,11 +121,9 @@ export default {
       this.crumbsList.push(pushYeWuLingYuCrumb)
 
       // 添加详情页面的 面包绡
-      console.log('添加详情页面的', this.yeWuFanWeiDetailJson)
       pushYeWuLingYuCrumb = {}
       pushYeWuLingYuCrumb.name = this.yeWuFanWeiDetailJson.themeName
       pushYeWuLingYuCrumb.pathMoudle = ''
-      console.log('pushYeWuLingYuCrumb2:', pushYeWuLingYuCrumb)
       this.crumbsList.push(pushYeWuLingYuCrumb)
 
       // 占位大图

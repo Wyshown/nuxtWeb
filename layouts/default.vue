@@ -56,12 +56,10 @@ export default {
 
   watch: {
     $route: {
-      handler: function(to, from) {
-        console.log(to.path)
-        console.log('2-----2----han: to', to)
-        console.log('2-----2----han: from', from)
+      handler: function() {
         this.navigationSelect = this.$route.name
-        console.log('2-----2----han: navigationSelect', this.$route.name)
+        console.log('this.$route: ', this.$route)
+        this.selectNavigation()
       },
       // 深度观察监听
       deep: true
@@ -71,6 +69,36 @@ export default {
     this.headListData = headJson
     this.footListData = footJson
     this.navigationSelect = this.$route.name
+    this.selectNavigation()
+    console.log('this.$route: ', this.$route)
+  },
+  methods: {
+    selectNavigation() {
+      // 业务领域
+      if (this.navigationSelect.includes('yewulingyu')) {
+        this.navigationSelect = 'yewulingyu-yewulingyu'
+      }
+      // 公司优势
+      else if (this.navigationSelect.includes('gongsiyoushi')) {
+        this.navigationSelect = 'gongsiyoushi-gongsiyoushi'
+      }
+      // 成功案例
+      else if (this.navigationSelect.includes('chenggonganli')) {
+        this.navigationSelect = 'chenggonganli'
+      }
+      // 美国概况
+      else if (this.navigationSelect.includes('meiguogaikuang')) {
+        this.navigationSelect = 'meiguogaikuang'
+      }
+      // 关于我们
+      else if (this.navigationSelect.includes('aboutus')) {
+        this.navigationSelect = 'aboutus'
+      }
+      // 首页
+      else {
+        this.navigationSelect = 'index'
+      }
+    }
   }
 }
 </script>
