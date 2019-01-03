@@ -25,8 +25,8 @@ export default {
     return {
       moduleNameData: '公司优势',
       // 公司优势
-      gongSiYoushiData: [],
-      selectYeWuLingYu: '',
+      gongSiYoushiData: gongSiYoushiJson,
+      selectYeWuLingYu: this.$route.params.gongsiyoushi,
       // 传入 vListModule 组件中的值
       listModuleData: [],
       // 面包屑
@@ -40,18 +40,14 @@ export default {
       gongSiYoushiDetail: {}
     }
   },
-  beforeMount() {
+  mounted() {
     // 获得路径上的参数, 选择左侧树菜单
-    this.selectYeWuLingYu = this.$route.params.gongsiyoushi
-
     console.log('this.$route.params:', this.$route)
-    // 公司优势
-    this.gongSiYoushiData = gongSiYoushiJson
 
     console.log('this.gongSiYoushiData', this.gongSiYoushiData)
     console.log('selectYeWuLingYu:', this.selectYeWuLingYu - 1)
 
-    this.gongSiYoushiDetail = this.gongSiYoushiData[this.selectYeWuLingYu - 1]
+    this.gongSiYoushiDetail = this.gongSiYoushiData[this.selectYeWuLingYu - 1] // Vue.set('gongSiYoushiDetail',,{})
 
     this.gongSiYoushiDetail = JSON.parse(
       JSON.stringify(this.gongSiYoushiDetail)

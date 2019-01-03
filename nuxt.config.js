@@ -65,7 +65,8 @@ module.exports = {
     // .babelrc配置
     babel: {
       ignore: [
-        './components/loading.vue' //这些文件可以使用非严格模式
+        './components/loading.vue', //这些文件可以使用非严格模式
+        './layouts/error.vue'
       ]
     },
     publicPath: '/_mgcc/',

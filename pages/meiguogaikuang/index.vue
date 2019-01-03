@@ -26,7 +26,7 @@ export default {
       // 面包屑
       crumbsList: [],
       // 美国概况
-      meiGuoGaiKuangData: [],
+      meiGuoGaiKuangData: this.$store.state.smallImg.meiGuoGaiKuangJson,
       // 占位大图
       imgJsonObjModule: {
         name: '美国概括',
@@ -44,7 +44,6 @@ export default {
     })
   },
   mounted() {
-    this.meiGuoGaiKuangData = this.$store.state.smallImg.meiGuoGaiKuangJson
     console.log('meiGuoGaiKuangData', this.$store.state.smallImg)
     console.log('meiGuoGaiKuangData', this.$store.state)
   },

@@ -28,7 +28,7 @@ export default {
       // 面包屑
       crumbsList: [],
       // 成功案例图片数据
-      chengGongAnLiImgData: [],
+      chengGongAnLiImgData: this.$store.state.smallImg.chengGongAnLiJson,
       // 占位大图
       imgJsonObjModule: {
         name: '成功案例',
@@ -41,9 +41,8 @@ export default {
     this.pushCrumbsList()
   },
   mounted() {
-    this.chengGongAnLiImgData = this.$store.state.smallImg.chengGongAnLiJson
     console.log('chengGongAnLiImgData', this.chengGongAnLiImgData)
-    console.log('chengGongAnLiImgData', this.$store.state)
+    console.log('this.$store.state', this.$store.state)
   },
   methods: {
     pushCrumbsList() {
