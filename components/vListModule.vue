@@ -61,16 +61,12 @@ export default {
           (this.page - 1) * 10,
           this.total
         )
-        console.log('--------1--------------')
       } else {
         this.forListModule = this.listModule.slice(
           (this.page - 1) * 10,
           this.page * 10
         )
-        console.log('--------2--------------')
       }
-      console.log(this.forListModule)
-
       this.forListModule = JSON.parse(JSON.stringify(this.forListModule))
       for (let val of this.forListModule) {
         val.themeBrief = base64.decode(val.themeBrief)

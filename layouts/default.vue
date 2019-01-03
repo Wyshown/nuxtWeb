@@ -9,6 +9,7 @@
         <nuxt-link
           v-for="(headList,index) in headListData" :key="index"
           :to="{path: headList.url}"
+          :class="{'active':headList.enName==navigationSelect}"
           tag="li">
           <a>
             {{ headList.name }}
@@ -48,12 +49,28 @@ export default {
   data() {
     return {
       headListData: headJson,
-      footListData: footJson
+      footListData: footJson,
+      navigationSelect: ''
+    }
+  },
+
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        console.log(to.path)
+        console.log('2-----2----han: to', to)
+        console.log('2-----2----han: from', from)
+        this.navigationSelect = this.$route.name
+        console.log('2-----2----han: navigationSelect', this.$route.name)
+      },
+      // 深度观察监听
+      deep: true
     }
   },
   beforeMount() {
     this.headListData = headJson
     this.footListData = footJson
+    this.navigationSelect = this.$route.name
   }
 }
 </script>
@@ -89,7 +106,12 @@ export default {
       color: #004a8a;
     }
   }
-
+  .active {
+    background-color: #004a8a;
+    a {
+      color: white;
+    }
+  }
   .nuxt-link-exact-active {
     background-color: #004a8a;
     color: white;

@@ -62,32 +62,26 @@ export default {
     }
 
     if (this.selectYeWuLingYu === '1') {
-      console.log('--------------1----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiPeiXunJson
     }
     // 境外考察
     else if (this.selectYeWuLingYu === '2') {
-      console.log('--------------2----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiKaoChaJson
     }
     // 人才引进
     else if (this.selectYeWuLingYu === '3') {
-      console.log('--------------3----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.renCaiYinJinJson
     }
     // 会议会展
     else if (this.selectYeWuLingYu === '4') {
-      console.log('--------------4----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.huiYiHuiZhanJson
     }
     // 项目实习
     else if (this.selectYeWuLingYu === '5') {
-      console.log('--------------5----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.xiangMuShiXiJson
     }
     // 境外培训
     else {
-      console.log('--------------else----------------')
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiPeiXunJson
     }
 

@@ -1,12 +1,12 @@
 <template>
   <div class="zhanweitu">
-    <img v-lazy="$store.state.env.imgRootUrl + imgJsonObj.modelImgUrl" style="width: 12.8rem;height: 4.94rem;">
+    <img :src="$store.state.env.imgRootUrl + imgJsonObj.modelImgUrl" style="width: 12.8rem;height: 4.94rem;">
     <div class="navigate">
       <div class="breadcrumb_url">您当前的位置: </div>
       <nuxt-link :to="{path: '/'}" >
         <div class="breadcrumb_url"><a>首页</a></div>
       </nuxt-link>
-      <nuxt-link v-for="(item,index) in aa" :key="index" :to="{ path: item.pathMoudle }">
+      <nuxt-link v-for="(item,index) in crumbsList" :key="index" :to="{ path: item.pathMoudle }">
         <div class="breadcrumb_url">&nbsp;/</div>
         <div :to="{path: '/'}" class="breadcrumb_url"><a>{{ item.name }}</a></div>
       </nuxt-link>
@@ -33,13 +33,23 @@ export default {
       }
     }
   },
-  data() {
-    return {
-      aa: []
+  watch: {
+    crumbsList: {
+      handler(newValue, oldValue) {
+        console.log('------------------1-----------1han-')
+        console.log('newValue: ', newValue)
+        console.log('oldValue: ', oldValue)
+        this.crumbsList = newValue
+      }
+    },
+    imgJsonObj: {
+      handler(newValue, oldValue) {
+        console.log('------------------222---------1han-')
+        console.log('newValue: ', newValue)
+        console.log('oldValue: ', oldValue)
+        this.imgJsonObj = newValue
+      }
     }
-  },
-  beforeMount() {
-    this.aa = this.crumbsList
   },
   mounted() {
     console.log('imgJsonObj-------,', this.imgJsonObj)

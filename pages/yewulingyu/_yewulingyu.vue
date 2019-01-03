@@ -35,6 +35,24 @@ export default {
       }
     }
   },
+  watch: {
+    crumbsList: {
+      handler(newValue, oldValue) {
+        console.log('------------------1-----------1han-')
+        console.log('newValue: ', newValue)
+        console.log('oldValue: ', oldValue)
+        this.crumbsList = newValue
+      }
+    },
+    imgJsonObj: {
+      handler(newValue, oldValue) {
+        console.log('------------------222---------1han-')
+        console.log('newValue: ', newValue)
+        console.log('oldValue: ', oldValue)
+        this.imgJsonObj = newValue
+      }
+    }
+  },
   beforeMount() {
     // 境外培训
     if (this.$route.params.yewulingyu === '1') {
@@ -59,11 +77,7 @@ export default {
     // 境外培训
     else {
       this.listModuleData = this.$store.state.yeWuLingYu.jingWaiPeiXunJson
-      console.log('121321321')
     }
-    console.log('this.$route.params.yewulingyu, this.listModuleData')
-    console.log(this.$route.params.yewulingyu, this.listModuleData)
-
     // 业务范围
     this.yewufanweiData = yewufanweiJson
     // 选中的业务领域

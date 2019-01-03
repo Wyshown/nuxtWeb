@@ -42,21 +42,14 @@ export default {
   },
   mounted() {
     // 获得路径上的参数, 选择左侧树菜单
-    console.log('this.$route.params:', this.$route)
-
-    console.log('this.gongSiYoushiData', this.gongSiYoushiData)
-    console.log('selectYeWuLingYu:', this.selectYeWuLingYu - 1)
-
     this.gongSiYoushiDetail = this.gongSiYoushiData[this.selectYeWuLingYu - 1] // Vue.set('gongSiYoushiDetail',,{})
 
     this.gongSiYoushiDetail = JSON.parse(
       JSON.stringify(this.gongSiYoushiDetail)
     )
-    console.log('this.gongSiYoushiDetail-----1', this.gongSiYoushiDetail)
     this.gongSiYoushiDetail.themeDetails = base64.decode(
       this.gongSiYoushiDetail.themeDetails
     )
-    console.log('this.gongSiYoushiDetail-----2', this.gongSiYoushiDetail)
 
     // 添加面包屑
     this.pushCrumbsList()
@@ -81,7 +74,6 @@ export default {
       for (var i = 0; i < this.gongSiYoushiData.length; i++) {
         // 动态添加公司优势二级页面
         if (this.selectYeWuLingYu === this.gongSiYoushiData[i].id) {
-          console.log('动态添加公司优势二级页面:', this.gongSiYoushiData[i])
           pushCrumb.name = this.gongSiYoushiData[i].modelName
           pushCrumb.pathMoudle = this.gongSiYoushiData[i].skipUrl
           // 占位大图
@@ -89,7 +81,6 @@ export default {
           this.imgJsonObjModule.modelImgUrl = this.gongSiYoushiData[
             i
           ].modelImgUrl
-          console.log('this.imgJsonObjModule,', this.imgJsonObjModule)
 
           this.crumbsList.push(pushCrumb)
         }
