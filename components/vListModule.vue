@@ -12,7 +12,7 @@
           </div>
         </nuxt-link>
       </div>
-      <el-pagination :total="total" layout="prev, pager, next" @current-change="handleCurrentChange"/>
+      <el-pagination v-show="listModule.length > 10" :total="total" layout="prev, pager, next" @current-change="handleCurrentChange"/>
     </div>
   </div>
 </template>
