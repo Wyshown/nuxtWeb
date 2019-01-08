@@ -24,7 +24,7 @@ export default {
     return {
       moduleNameData: '关于我们',
       // 关于我们
-      aboutUsData: [],
+      aboutUsData: aboutUsJson,
       selectAboutUs: '1',
       // 传入 vListModule 组件中的值
       listModuleData: [],
@@ -40,8 +40,6 @@ export default {
     }
   },
   beforeMount() {
-    // 关于我们列表数据
-    this.aboutUsData = aboutUsJson
     // 公司介绍详情的数据
     this.aboutUsDetail = this.aboutUsData[0]
     // 替换内存中路径, 并解析详情页面数据

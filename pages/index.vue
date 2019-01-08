@@ -4,7 +4,7 @@
     <el-carousel height="4.95rem" style="overflow: hidden;" >
       <el-carousel-item v-for="(item,index) in lunboData" :key="index">
         <nuxt-link :to="{path: item.skipUrl}">
-          <img v-lazy="$store.state.env.imgRootUrl + item.modelImgUrl">
+          <img :src="$store.state.env.imgRootUrl + item.modelImgUrl">
         </nuxt-link>
       </el-carousel-item>
     </el-carousel>
@@ -15,7 +15,7 @@
         <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.98rem;width: 1.36rem">
           <nuxt-link :to="{path: item.skipUrl}">
             <img :src="$store.state.env.imgRootUrl + item.smallModelImgUrl" style="width: 1.36rem;height: 1.55rem;">
-            <a class="fontSizeContent">{{ item.modelName }}</a>
+            <span class="fontSizeContent">{{ item.modelName }}</span>
           </nuxt-link>
         </div>
       </div>
@@ -29,7 +29,7 @@
             <div style="margin: 0 0.19rem;width: 0.94rem;height: 0.94rem;border-radius: 50%;background-color: #80a5c5;border: 0.02rem solid #fff;">
               <p style="display: inline-block;line-height: 0.94rem;width: 100%;height: 100%;text-align: center;color: #fff">{{ item.modelName }}</p>
             </div>
-            <a class="fontSizeGongSiYouShiContent" v-html="item.modelBrief"/>
+            <span class="fontSizeGongSiYouShiContent" v-html="item.modelBrief"/>
           </nuxt-link>
         </div>
       </div>
@@ -42,9 +42,9 @@
           <nuxt-link :to="{path: item.skipUrl}">
             <img :src="$store.state.env.imgRootUrl + item.smallModelImgUrl" class="float_ul" style="width: 1.36rem;height: 1.14rem;">
             <div class="float_ul" style="width: 2.7rem;padding: 0 0.2rem;background-color: #fff;height: 1.14rem;">
-              <a class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.modelName }}</a>
-              <a class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.modelBrief }}</a>
-              <a class="ilb fontSizeChengGongAnLiGengDuo">更多</a>
+              <span class="ilb fontSizeChengGongAnLiTitleContent" style="margin-top: 0.14rem;">{{ item.modelName }}</span>
+              <span class="ilb fontSizeChengGongAnLiTitlIentro" style="margin-top: 0.12rem;">{{ item.modelBrief }}</span>
+              <span class="ilb fontSizeChengGongAnLiGengDuo">更多</span>
             </div>
           </nuxt-link>
         </div>

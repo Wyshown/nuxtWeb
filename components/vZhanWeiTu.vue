@@ -4,11 +4,11 @@
     <div class="navigate">
       <div class="breadcrumb_url">您当前的位置: </div>
       <nuxt-link :to="{path: '/'}" >
-        <div class="breadcrumb_url"><a>首页</a></div>
+        <div class="breadcrumb_url"><span>首页</span></div>
       </nuxt-link>
       <nuxt-link v-for="(item,index) in crumbsList" :key="index" :to="{ path: item.pathMoudle }">
         <div class="breadcrumb_url">&nbsp;/</div>
-        <div :to="{path: '/'}" class="breadcrumb_url"><a>{{ item.name }}</a></div>
+        <div :to="{path: '/'}" class="breadcrumb_url"><span>{{ item.name }}</span></div>
       </nuxt-link>
     </div>
   </div>
@@ -72,7 +72,6 @@ export default {
   .navigate {
     margin-top: 0.48rem;
     margin-left: 1.82rem;
-    background: #f4f4f4;
   }
   .breadcrumb_url {
     display: inline-block;

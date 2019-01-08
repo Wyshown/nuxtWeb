@@ -5,9 +5,9 @@
         <nuxt-link :to="{path: '/yewulingyu/detail/' + $route.params.yewulingyu + '_' + ((page - 1) * rows + index + 1)}">
           <img :src="$store.state.env.imgRootUrl + item.themeImgUrl" class="float_ul" style="width: 2.12rem;height: 1.56rem;">
           <div class="float_ul" style="margin-left: 0.36rem;width: 4.57rem;">
-            <p class="yewulingyu_title"><a style="color: #515862;">{{ item.themeName }}</a></p>
+            <p class="yewulingyu_title"><span style="color: #515862;">{{ item.themeName }}</span></p>
             <p class="ilb yewulingyu_intro" style="margin-top: 0.14rem;">
-              <a style="color: #515862;" v-html="item.themeBrief"/>
+              <span style="color: #515862;" v-html="item.themeBrief"/>
             </p>
           </div>
         </nuxt-link>

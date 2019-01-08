@@ -48,7 +48,6 @@ export default {
     text-align: center;
     margin-top: 0.13rem;
     p {
-      width: 0.64rem;
       height: 0.17rem;
       font-size: 0.16rem;
       font-weight: bold;
