@@ -26,7 +26,7 @@
       <div style="height: 0.95rem;">
         <p class="ilb wangzhandaohang">网站导航</p>
       </div>
-      <div style="margin-left: 1.83rem;border-bottom: 1px solid #284689;border-top: 1px solid #284689;height: 1.88rem;margin-right: 1.6rem;display: flex;justify-content: space-between;">
+      <div style="margin-left: 1.83rem;border-bottom: 1px solid #284689;border-top: 1px solid #284689;margin-right: 1.6rem;display: flex;justify-content: space-between;">
         <div v-for="(item,index) in footListData" :key="index">
           <p class="ilb bottom_group">{{ item.bottom_name }}</p>
           <ul style="margin-top: 0.23rem;">

@@ -113,6 +113,7 @@ export default {
     }
     .el-carousel__container {
       height: 1.55rem;
+      overflow: hidden;
     }
   }
 }
