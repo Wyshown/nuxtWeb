@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <!--轮播图-->
-    <el-carousel height="4.95rem">
+    <el-carousel height="4.95rem" style="overflow: hidden;" >
       <el-carousel-item v-for="(item,index) in lunboData" :key="index">
         <nuxt-link :to="{path: item.skipUrl}">
           <img v-lazy="$store.state.env.imgRootUrl + item.modelImgUrl">
@@ -113,7 +113,6 @@ export default {
     }
     .el-carousel__container {
       height: 1.55rem;
-      overflow: hidden;
     }
   }
 }
