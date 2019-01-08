@@ -104,16 +104,17 @@ export default {
     height: 0.15rem;
     border-radius: 50%;
   }
-}
-.meiguoGaiKuang {
-  background-color: #f4f4f4;
-  .el-carousel__item {
-    display: flex;
-    justify-content: space-between;
+  .meiguoGaiKuang {
     background-color: #f4f4f4;
-  }
-  .el-carousel__container {
-    height: 1.55rem;
+    .el-carousel__item {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f4f4f4;
+    }
+    .el-carousel__container {
+      height: 1.55rem;
+      overflow: hidden;
+    }
   }
 }
 </style>
