@@ -76,23 +76,16 @@ export default {
   data() {
     return {
       // 轮播数据
-      lunboData: [],
+      lunboData: lunboJson,
       // 业务范围
-      yewufanweiData: [],
+      yewufanweiData: yewufanweiJson,
       // 公司优势
-      gongsiyoushiData: [],
+      gongsiyoushiData: gongsiyoushiJson,
       // 成功案例
-      chenggonganliData: [],
+      chenggonganliData: chenggonganliJson,
       // 美国概况
-      meiguogaikuangData: []
+      meiguogaikuangData: meiguogaikuangJson
     }
-  },
-  mounted() {
-    this.lunboData = lunboJson
-    this.yewufanweiData = yewufanweiJson
-    this.gongsiyoushiData = gongsiyoushiJson
-    this.chenggonganliData = chenggonganliJson
-    this.meiguogaikuangData = meiguogaikuangJson
   }
 }
 </script>
