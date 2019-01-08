@@ -9,7 +9,8 @@
 
 html {
   overflow: -moz-scrollbars-vertical;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-size: 100px; }
 
 /*解决头部有下拉框导致页面头部抖动的问题结束*/
 html, *:before, *:after {
@@ -171,5 +172,14 @@ img {
   width: 0.42rem;
   height: 0.42rem;
   margin-right: 0.2rem; }
+
+.fixed-head {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@
 /*html,body{ overflow:scroll; min-height:101%;}*/
 /* 清除IE的叉号和眼睛 */
 ::-ms-clear, ::-ms-reveal{display: none;}
-html{ overflow:-moz-scrollbars-vertical;scroll-behavior:smooth;}
+html{ overflow:-moz-scrollbars-vertical;scroll-behavior:smooth;font-size: 100px;}
 /*解决头部有下拉框导致页面头部抖动的问题结束*/
  html,*:before, *:after{ box-sizing: border-box;}
 body{
@@ -163,4 +163,14 @@ img{
   width: 0.42rem;
   height: 0.42rem;
   margin-right: 0.2rem;
+}
+// 固定头部
+.fixed-head{
+  position: fixed;
+  top:0;
+  z-index: 100;
+  width:100%;
+  margin:0 auto;
+  left:0;
+  right:0;
 }
