@@ -147,43 +147,43 @@ export default {
       color: inherit;
     }
   }
-  .wangzhandaohang {
-    width: 0.89rem;
-    height: 0.22rem;
-    font-size: 0.22rem;
-    font-weight: 400;
-    color: #fff;
-    line-height: 0.22rem;
-    margin-left: 1.83rem;
-    margin-top: 0.56rem;
-  }
-  .banquanshuoming {
-    width: 7.59rem;
-    margin-left: 1.83rem;
-    height: 0.15rem;
-    font-size: 0.12rem;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 0.22rem;
-    margin-top: 0.24rem;
-  }
-  .bottom_group {
-    width: 0.69rem;
-    height: 0.18rem;
-    margin-top: 0.29rem;
-    font-size: 0.17rem;
-    font-weight: 400;
-    color: #fff;
-    line-height: 0.22rem;
-  }
-  .button_skip_p {
-    font-size: 0.13rem;
-    font-weight: 400;
+}
+.wangzhandaohang {
+  width: 0.89rem;
+  height: 0.22rem;
+  font-size: 0.22rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 0.22rem;
+  margin-left: 1.83rem;
+  margin-top: 0.56rem;
+}
+.banquanshuoming {
+  width: 7.59rem;
+  margin-left: 1.83rem;
+  height: 0.15rem;
+  font-size: 0.12rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 0.22rem;
+  margin-top: 0.24rem;
+}
+.bottom_group {
+  width: 0.69rem;
+  height: 0.18rem;
+  margin-top: 0.29rem;
+  font-size: 0.17rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 0.22rem;
+}
+.button_skip_p {
+  font-size: 0.13rem;
+  font-weight: 400;
+  color: #8db0ff;
+  margin-bottom: 0.1rem;
+  a {
     color: #8db0ff;
-    margin-bottom: 0.1rem;
-    a {
-      color: #8db0ff;
-    }
   }
 }
 </style>
