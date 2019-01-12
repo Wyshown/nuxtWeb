@@ -71,7 +71,7 @@ export default {
     font-size: 0.16rem;
     font-family: MicrosoftYaHei;
     font-weight: 400;
-    color: #a09196;
+    color: #6a7179;
     line-height: 0.21rem;
   }
   .p2Class {
@@ -79,9 +79,9 @@ export default {
     font-size: 0.14rem;
     font-family: MicrosoftYaHei;
     font-weight: 400;
-    color: #a09196;
-    line-height: 0.21rem;
+    color: #6a7179;
     margin-top: 0.15rem;
+    line-height: 0.26rem;
   }
 }
 </style>

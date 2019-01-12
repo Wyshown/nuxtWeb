@@ -8,9 +8,9 @@
         </nuxt-link>
       </el-carousel-item>
     </el-carousel>
-    <!--业务范围-->
+    <!--业务领域-->
     <div style="height: 3.64rem;background-color: #f4f4f4">
-      <p class="fontSizeTitle" style="display: inline-block;">业务范围</p>
+      <p class="fontSizeTitle" style="display: inline-block;">业务领域</p>
       <div style="margin-top: 0.46rem; display: flex;justify-content: space-around;padding: 0 1.83rem;">
         <div v-for="(item,index) in yewufanweiData" :key="index" class="img_hover_big" style="height: 1.98rem;width: 1.36rem">
           <nuxt-link :to="{path: item.skipUrl}">
@@ -67,7 +67,7 @@
 </template>
 <script>
 import lunboJson from '~/static/json/home/lunbo.json' // 首页轮播
-import yewufanweiJson from '~/static/json/home/yewufanwei.json' // 业务范围
+import yewufanweiJson from '~/static/json/home/yewufanwei.json' // 业务领域
 import gongsiyoushiJson from '~/static/json/home/gongsiyoushi.json' // 公司优势
 import chenggonganliJson from '~/static/json/home/chenggonganli.json' // 成功案例
 import meiguogaikuangJson from '~/static/json/home/meiguogaikuang.json' // 美国概况
@@ -77,7 +77,7 @@ export default {
     return {
       // 轮播数据
       lunboData: lunboJson,
-      // 业务范围
+      // 业务领域
       yewufanweiData: yewufanweiJson,
       // 公司优势
       gongsiyoushiData: gongsiyoushiJson,
