@@ -4,7 +4,7 @@
     "modelName": "培训",
     "smallModelImgUrl": "changcheng/1shouye/4chenggonganli/1.png",
     "modelBrief": "25年间，先后组织各级政府部门、企业、机构完成2000多个咨询培训项目，培训学员60000余人，获得广泛认可。",
-    "skipUrl": "跳转至成功案例二级页面",
+    "skipUrl": "/chenggonganli",
     "seq": "1"
   },
   {
@@ -12,7 +12,7 @@
     "modelName": "人才",
     "smallModelImgUrl": "changcheng/1shouye/4chenggonganli/2.png",
     "modelBrief": "以人才带产业，以产业促经济。1场招聘汇聚500位海外博士，1年引荐15+海外项目，1个项目带动1个区域发展。",
-    "skipUrl": "跳转至成功案例二级页面",
+    "skipUrl": "/chenggonganli",
     "seq": "2"
   },
   {
@@ -20,7 +20,7 @@
     "modelName": "考察",
     "smallModelImgUrl": "changcheng/1shouye/4chenggonganli/3.png",
     "modelBrief": "采用大学培训、研讨会、知名企业座谈、访问交流等形式，满足客户考察目标。客户包括：BAT、知名商学院、国家级媒体等。",
-    "skipUrl": "跳转至成功案例二级页面",
+    "skipUrl": "/chenggonganli",
     "seq": "3"
   },
   {
@@ -28,7 +28,7 @@
     "modelName": "会议",
     "smallModelImgUrl": "changcheng/1shouye/4chenggonganli/4.png",
     "modelBrief": "组织中国企业参加各行业、各类主题的会展。如：CES国际消费电子展，ATD国际会议会展、哈佛中国论坛等。",
-    "skipUrl": "跳转至成功案例二级页面",
+    "skipUrl": "/chenggonganli",
     "seq": "4"
   }
 ]

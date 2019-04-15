@@ -3,7 +3,7 @@
     <!--此处为公众头部信息-->
     <div class="fixed-head shouye" style="width: 12.8rem;height: 0.80rem;margin:0px auto;background: #FFFFFF;display: flex;align-items: center;">
       <a href="/">
-        <img class="ilb float_ul" style="margin-left: 1.85rem;" src="~/static/img/logo.png">
+        <img class="ilb float_ul" style="margin-left: 1.85rem;width: 1.55rem;height: 0.48rem;" src="~/static/img/logo.png">
       </a>
       <ul class="ilb float_ul" style="font-size: 0.17rem;margin-left: 1.55rem;height: 0.80rem;">
         <nuxt-link
@@ -159,9 +159,8 @@ export default {
   margin-top: 0.56rem;
 }
 .banquanshuoming {
-  width: 7.59rem;
   margin-left: 1.83rem;
-  height: 0.15rem;
+  /*height: 0.15rem;*/
   font-size: 0.12rem;
   font-weight: 400;
   color: #ffffff;
@@ -169,7 +168,6 @@ export default {
   margin-top: 0.24rem;
 }
 .bottom_group {
-  width: 0.69rem;
   height: 0.18rem;
   margin-top: 0.29rem;
   font-size: 0.17rem;

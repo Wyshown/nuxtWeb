@@ -56,7 +56,6 @@ export default {
     }
   }
   .yewulingyu_theme {
-    width: 0.93rem;
     height: 0.21rem;
     font-size: 0.22rem;
     font-weight: 400;
