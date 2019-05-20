@@ -135,6 +135,12 @@
         "modelName": "中国国家外专局",
         "skipUrl": "http://www.safea.gov.cn/",
         "skipForm": "_blank"
+      },
+      {
+        "id": "4",
+        "modelName": "高训网",
+        "skipUrl": "http://www.gaoxun.com/",
+        "skipForm": "_blank"
       }
     ]
   }
